@@ -3,7 +3,7 @@
 from odoo import models, fields
 
 class Libro(models.Model):
-    _name: 'libreria.libro'
+    _name = 'libreria.libro'
     _description = 'Libro'
     
     name = fields.Char(string = 'Título', required = True, help = 'Introduce el título del libro')
