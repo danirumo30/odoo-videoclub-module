@@ -11,7 +11,7 @@ class Pelicula(models.Model):
     drm_duracion = fields.Integer(string='Duración', help='Introduce la duración de la película en minutos')
     drm_precio = fields.Float(string='Precio', help='Introduce el precio de la película')
     drm_ejemplares = fields.Integer(string='Ejemplares', help='Introduce el número de ejemplares en inventario')
-    drm_fecha_salida = fields.Date(string='Fecha de salida', help='Introduce fecha de salida')
+    drm_fecha_salida = fields.Datetime(string='Fecha de salida', default = fields.Datetime.now, help='Introduce fecha de salida')
     drm_portada = fields.Binary(string='Portada', help='Sube la imagen de la portada de la película')
     
     # Relaciones Many2Many

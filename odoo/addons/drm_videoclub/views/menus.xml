@@ -34,27 +34,27 @@
         name="Películas"
         action="drm_videoclub.pelicula_action"
         parent="drm_videoclub.root"
-        sequence="15"/>
+        sequence="11"/>
 
     <menuitem
         id="drm_videoclub.categoria_menu"
         name="Categorías"
         action="drm_videoclub.categoria_action"
         parent="drm_videoclub.root"
-        sequence="10"/>
+        sequence="12"/>
 
     <menuitem
         id="drm_videoclub.director_menu"
         name="Directores"
         action="drm_videoclub.director_action"
         parent="drm_videoclub.root"
-        sequence="15"/>
+        sequence="13"/>
 
     <menuitem
         id="drm_videoclub.actor_menu"
         name="Actores"
         action="drm_videoclub.actor_action"
         parent="drm_videoclub.root"
-        sequence="15"/>
+        sequence="14"/>
   </data>
 </odoo>

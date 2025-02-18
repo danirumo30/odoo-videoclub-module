@@ -8,7 +8,7 @@ class Actor(models.Model):
     
     drm_nombre = fields.Char(string='Nombre', required=True, help='Introduce el nombre del actor')
     drm_nacionalidad = fields.Char(string='Nacionalidad', required=True, help='Introduce la nacionalidad del actor')
-    drm_fecha_nacimiento = fields.Date(string='Fecha de Nacimiento', help='Introduce la fecha de nacimiento del actor')
+    drm_fecha_nacimiento = fields.Datetime(string='Fecha de Nacimiento', help='Introduce la fecha de nacimiento del actor')
     drm_biografia = fields.Text(string='Biografía', help='Introduce la biografía del actor')
     drm_foto = fields.Binary(string='Foto', help='Sube la imagen del actor')
 

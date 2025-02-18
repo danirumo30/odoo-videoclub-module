@@ -1,0 +1,36 @@
+<odoo>
+  <data>
+    <record id="drm_videoclub.actor_tree" model="ir.ui.view">
+      <field name="name">drm_videoclub.actor.tree</field>
+      <field name="model">drm_videoclub.actor</field>
+      <field name="arch" type="xml">
+        <tree string="Actor">
+          <field name="drm_nombre"/>
+          <field name="drm_nacionalidad"/>
+          <field name="drm_fecha_nacimiento"/>
+          <field name="drm_biografia"/>
+          <field name="drm_foto"/>
+          <field name="drm_pelicula_ids"/>
+        </tree>
+      </field>
+    </record>
+    <record id="drm_videoclub.actor_form" model="ir.ui.view">
+      <field name="name">drm_videoclub.actor.form</field>
+      <field name="model">drm_videoclub.actor</field>
+      <field name="arch" type="xml">
+        <form string="">
+          <sheet>
+            <group>
+              <field name="drm_nombre"/>
+              <field name="drm_nacionalidad"/>
+              <field name="drm_fecha_nacimiento"/>
+              <field name="drm_biografia"/>
+              <field name="drm_foto"/>
+              <field name="drm_pelicula_ids"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+  </data>
+</odoo>

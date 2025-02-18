@@ -1,0 +1,44 @@
+<odoo>
+  <data>
+    <record id="drm_videoclub.pelicula_tree" model="ir.ui.view">
+      <field name="name">drm_videoclub.pelicula.tree</field>
+      <field name="model">drm_videoclub.pelicula</field>
+      <field name="arch" type="xml">
+        <tree string="Pelicula">
+          <field name="drm_nombre"/>
+          <field name="drm_sinopsis"/>
+          <field name="drm_duracion"/>
+          <field name="drm_precio"/>
+          <field name="drm_ejemplares"/>
+          <field name="drm_fecha_salida"/>
+          <field name="drm_portada"/>
+          <field name="drm_categoria_ids"/>
+          <field name="drm_actor_ids"/>
+          <field name="drm_director_id"/>
+        </tree>
+      </field>
+    </record>
+    <record id="drm_videoclub.pelicula_form" model="ir.ui.view">
+      <field name="name">drm_videoclub.pelicula.form</field>
+      <field name="model">drm_videoclub.pelicula</field>
+      <field name="arch" type="xml">
+        <form string="">
+          <sheet>
+            <group>
+              <field name="drm_nombre"/>
+              <field name="drm_sinopsis"/>
+              <field name="drm_duracion"/>
+              <field name="drm_precio"/>
+              <field name="drm_ejemplares"/>
+              <field name="drm_fecha_salida"/>
+              <field name="drm_portada"/>
+              <field name="drm_categoria_ids"/>
+              <field name="drm_actor_ids"/>
+              <field name="drm_director_id"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+  </data>
+</odoo>
