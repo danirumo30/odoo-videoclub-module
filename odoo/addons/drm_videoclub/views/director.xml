@@ -5,11 +5,11 @@
       <field name="model">drm_videoclub.director</field>
       <field name="arch" type="xml">
         <tree string="Director">
+          <field name="drm_foto" widget="image" class="oe_avatar"/>
           <field name="drm_nombre"/>
           <field name="drm_nacionalidad"/>
           <field name="drm_fecha_nacimiento"/>
           <field name="drm_biografia"/>
-          <field name="drm_foto"/>
           <field name="drm_pelicula_ids"/>
         </tree>
       </field>
@@ -21,11 +21,11 @@
         <form string="">
           <sheet>
             <group>
+              <field name="drm_foto" widget="image" class="oe_avatar"/>
               <field name="drm_nombre"/>
               <field name="drm_nacionalidad"/>
               <field name="drm_fecha_nacimiento"/>
               <field name="drm_biografia"/>
-              <field name="drm_foto"/>
               <field name="drm_pelicula_ids"/>
             </group>
           </sheet>

@@ -10,7 +10,7 @@ class Director(models.Model):
     drm_nacionalidad = fields.Char(string='Nacionalidad', required=True, help='Introduce la nacionalidad del director')
     drm_fecha_nacimiento = fields.Datetime(string='Fecha de Nacimiento', help='Introduce la fecha de nacimiento del director')
     drm_biografia = fields.Text(string='Biografía', help='Introduce la biografía del director')
-    drm_foto = fields.Binary(string='Foto', help='Sube la imagen del director')
+    drm_foto = fields.Image(string='Foto', max_width = 64, max_height = 64, help='Sube la imagen del director')
 
     # Relación One2many
     drm_pelicula_ids = fields.One2many('drm_videoclub.pelicula', 'drm_director_id', string='Películas dirigidas')
