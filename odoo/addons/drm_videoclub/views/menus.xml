@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <record id="drm_videoclub.pelicula_action" model="ir.actions.act_window">
+        <field name="name">Película</field>
+        <field name="res_model">drm_videoclub.pelicula</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="drm_videoclub.categoria_action" model="ir.actions.act_window">
+        <field name="name">Categoría</field>
+        <field name="res_model">drm_videoclub.categoria</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="drm_videoclub.director_action" model="ir.actions.act_window">
+        <field name="name">Director</field>
+        <field name="res_model">drm_videoclub.director</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="drm_videoclub.actor_action" model="ir.actions.act_window">
+        <field name="name">Actor</field>
+        <field name="res_model">drm_videoclub.actor</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="drm_videoclub.root"
+        name="Videoclub"
+        sequence="10"/>
+
+    <menuitem
+        id="drm_videoclub.pelicula_menu"
+        name="Películas"
+        action="drm_videoclub.pelicula_action"
+        parent="drm_videoclub.root"
+        sequence="15"/>
+
+    <menuitem
+        id="drm_videoclub.categoria_menu"
+        name="Categorías"
+        action="drm_videoclub.categoria_action"
+        parent="drm_videoclub.root"
+        sequence="10"/>
+
+    <menuitem
+        id="drm_videoclub.director_menu"
+        name="Directores"
+        action="drm_videoclub.director_action"
+        parent="drm_videoclub.root"
+        sequence="15"/>
+
+    <menuitem
+        id="drm_videoclub.actor_menu"
+        name="Actores"
+        action="drm_videoclub.actor_action"
+        parent="drm_videoclub.root"
+        sequence="15"/>
+  </data>
+</odoo>
