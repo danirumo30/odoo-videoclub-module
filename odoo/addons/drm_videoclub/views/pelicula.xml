@@ -12,9 +12,19 @@
           <field name="drm_precio"/>
           <field name="drm_ejemplares"/>
           <field name="drm_fecha_salida"/>
-          <field name="drm_categoria_ids"/>
-          <field name="drm_actor_ids"/>
-          <field name="drm_director_id"/>
+          <field name="drm_categoria_ids" widget="many2many_tags" options="{'separator': ', '}" string="Categorías">
+            <attribute name="widget">many2many_tags</attribute>
+            <attribute name="options">{'separator': ', '}</attribute>
+            <attribute name="context">{'default_drm_nombre': 'drm_nombre'}</attribute>
+          </field>
+          <field name="drm_actor_ids" widget="many2many_tags" options="{'separator': ', '}" string="Actores">
+            <attribute name="widget">many2many_tags</attribute>
+            <attribute name="options">{'separator': ', '}</attribute>
+            <attribute name="context">{'default_drm_nombre': 'drm_nombre'}</attribute>
+          </field>
+          <field name="drm_director_id" widget="many2one" string="Director" options="{'no_open': True}">
+            <attribute name="context">{'default_drm_nombre': 'drm_nombre'}</attribute>
+          </field>
         </tree>
       </field>
     </record>
@@ -25,7 +35,7 @@
         <form string="">
           <sheet>
             <group>
-              <field name="drm_portada" widget="image" class="oe_avatar"/>
+              <field name="drm_portada" widget="image" class="oe_avatar_left"/>
               <field name="drm_nombre"/>
               <field name="drm_sinopsis"/>
               <field name="drm_duracion"/>

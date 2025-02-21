@@ -1,44 +1,42 @@
 <odoo>
-    <data>
-    <!--
-        <record id="drm_pelicula_id" model="drm_videoclub.pelicula">
-            <field name="name">Spiderman 1</field>
-            <field name="categoria_id" ref="drm_categoria_id"/>
-            <field name="actor_id" ref="drm_actor_id"/>
-            <field name="director_id" ref="drm_direcor_id"/>
-            <field name="drm_nombre">Spiderman 1</field>
-            <field name="drm_sinopsis">El hombre araña</field>
-            <field name="drm_duracion">120</field>
-            <field name="drm_precio">20</field>
-            <field name="drm_ejemplares">1</field>
-            <field name="drm_fecha_salida">15/02/2004</field>
-            <field name="drm_portada">/media/alumnotd/Kidou/DAM/2ºDAM/SGE/2ºTrimestre/Proyecto/SGE-ODOO-DEVA-12/odoo/addons/drm_videoclub/static/description/icon.png</field>
-            <field name="drm_categoria_ids" ref="drm_categoria_id"/>
-            <field name="drm_actor_ids" ref="drm_actor_id"/>
-            <field name="drm_director_id" ref="drm_director_id"/>
-        </record>
-
+    <data noupdate="1">
+        <!-- Categoría -->
         <record id="drm_categoria_id" model="drm_videoclub.categoria">
             <field name="drm_nombre">Acción</field>
         </record>
 
+        <!-- Director -->
         <record id="drm_director_id" model="drm_videoclub.director">
-            <field name="drm_nombre">Juan</field>
-            <field name="drm_nacionalidad">Española</field>
-            <field name="drm_fecha_nacimiento">15/02/2000</field>
-            <field name="drm_biografia">Es un director</field>
-            <field name="drm_foto">/media/alumnotd/Kidou/DAM/2ºDAM/SGE/2ºTrimestre/Proyecto/SGE-ODOO-DEVA-12/odoo/addons/drm_videoclub/static/description/icon.png</field>
-            <field name="drm_pelicula_ids" ref="drm_pelicula_id"/>
+            <field name="drm_nombre">Sam Raimi</field>
+            <field name="drm_nacionalidad">Estadounidense</field>
+            <field name="drm_fecha_nacimiento">1959-10-23 00:00:00</field>
+            <field name="drm_biografia">Es un director de cine estadounidense, reconocido mayormente por su trabajo en la dirección de la primera trilogía del personaje Spider-Man</field>
+            <field name="drm_foto">/9j/4AAQSkZJRgABAQEAYABgAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2ODApLCBxdWFsaXR5ID0gNzUK/9sAQwAIBgYHBgUIBwcHCQkICgwUDQwLCwwZEhMPFB0aHx4dGhwcICQuJyAiLCMcHCg3KSwwMTQ0NB8nOT04MjwuMzQy/9sAQwEJCQkMCwwYDQ0YMiEcITIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIy/8AAEQgAQAArAwEiAAIRAQMRAf/EABsAAAICAwEAAAAAAAAAAAAAAAUHBAYBAggD/8QAMhAAAQMCBQIEBQIHAAAAAAAAAQIDBAURAAYSITEHE0FRYYEUFTJxoSLhQlJygpGywv/EABgBAQADAQAAAAAAAAAAAAAAAAQAAQMF/8QAHxEAAgMAAwADAQAAAAAAAAAAAAECAxEEEiETMmFx/9oADAMBAAIRAxEAPwB14WWbOqbMGY7S6LEXNkoOkupXZOrxAtzbxxbM91d2h5LqU1i/fCA02RyFLOkH2vfChylTmvhmVITdxdypxQub38PLGdk+i02pq+SWAip51z1IjuMyJDjccqtdLQBNjxqtc/tidQepddo01h2a8qVDVpDqFAJ9COOfXzwzRQo0mCptaEqChuFcHC8znlJUSN3oqGlaDurRZWjjf+be2MYX6/RE+Mkn1HlTKlFrFNYnwnQ7HeTqSofkHyI4xKthO9HKw9CmP0CSq7L6S/G34I5Hpcb+2HJbCU9BNYwDnaF8xyhPipQFrWE9u5tZQUCD+MLHL6flsZpDi22gAR3HBsDe+Lyh2sOSKnCkTFqYpF1F0kFcnXZberbbSi/3NsCKYw1LdXpU24O4pSHLgggk8HB+RozipMM06qxXY5KXW3AEa9bR2I8xgJWpbT7ToHZUm2kpDoUvfzTiQ8x+qWlm2ltjkbc+XptjxNPjKiNzlttqUAlRISAq4G3h4YN/RmfpRKEzNi57pimmg2hVRaaS4L/qBuSk/wBoOOh8J6hoNS6iZeiB1GiC0/OcSm31fSm/rvhw4dX9Tl3eSMaU3J0p3525++KVLp8Sj1RyLHQlpl1HcabTwm5NwB5ar/5wLrXWegQdbdKaeqbydtaR22r/ANR3PsMCMnvVPPMSqVZ14KqbUoHQkWSGykWQkeQtt7+eJbHtElMusievupU6H47btyQFBXI98bfEGPQnXZSgEpuQgb7Dw9f3xNMrspU3IjuB+9tKUXufTEykZak1SY3MqA7cNhYWlk/xqHF/QHf2GCqLk0h07FGOgjo5QIzdFdzK60sVGe66nUo8N6+APUjn0wzscsUzPFfyrUZbVInKRCXIWtMd1IcbI1GxAPG3lbFya651oNJDlHpzi7bqC3E39r7YcvDmt6xXISpDfIscN7oLJ0VitQifrYbeHsog/wCwwpymwIxfOjUr4bqOy1ewkxXWvubBX/OIUXLqT1AqGXcy/L2KNESn4cPImSFEld7i+lJGwII3xb8u1qryemQrNbZYZlGG7ICWUlI7YSSgkHgkWNh54VXXaSy/nCKwg6lRqdd4Dx1LJCT7D84aeepzMfpbUZEYpSy9EQ2yBxpXpSLexxWJel68w5hUgKQNYubfnGBa30fnHssXxslsaRfFlH//2Q==</field>
         </record>
 
+        <!-- Actor -->
         <record id="drm_actor_id" model="drm_videoclub.actor">
-            <field name="drm_nombre">Jose</field>
-            <field name="drm_nacionalidad">Española</field>
-            <field name="drm_fecha_nacimiento">15/02/2001</field>
-            <field name="drm_biografia">Es un actor</field>
-            <field name="drm_foto">/media/alumnotd/Kidou/DAM/2ºDAM/SGE/2ºTrimestre/Proyecto/SGE-ODOO-DEVA-12/odoo/addons/drm_videoclub/static/description/icon.png</field>
-            <field name="drm_pelicula_ids" ref="drm_pelicula_id"/>
+            <field name="drm_nombre">Tobey Maguire</field>
+            <field name="drm_nacionalidad">Estadounidense</field>
+            <field name="drm_fecha_nacimiento">1975-06-27 00:00:00</field>
+            <field name="drm_biografia">Es un actor y productor de cine estadounidense, conocido principalmente por interpretar a Peter Parker en la trilogía de Spider-Man de Sam Raimi</field>
+            <field name="drm_foto">/9j/4AAQSkZJRgABAQEAYABgAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2ODApLCBxdWFsaXR5ID0gNzUK/9sAQwAIBgYHBgUIBwcHCQkICgwUDQwLCwwZEhMPFB0aHx4dGhwcICQuJyAiLCMcHCg3KSwwMTQ0NB8nOT04MjwuMzQy/9sAQwEJCQkMCwwYDQ0YMiEcITIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIy/8AAEQgAQAArAwEiAAIRAQMRAf/EABoAAAMBAQEBAAAAAAAAAAAAAAUGBwMCBAj/xAA1EAACAQMDAgQEAwcFAAAAAAABAgMEBREABhIhMQcTQWEUUXGBIjKRF0JSVWOCk6GxwtHx/8QAGQEBAQEBAQEAAAAAAAAAAAAABAMBAAIF/8QAIBEAAgICAgIDAAAAAAAAAAAAAQIAAxEhEjETUQRBYf/aAAwDAQACEQMRAD8AunYZOo94g+LwtdY1u22IZKuJuMtW8YdVx3Vc9/c9tOviTdJ7RsS41FMxWVkEYZehHJgpx74OoVtDbkF2WWqrMEB8cNRdwuzL11lzgQXWblv15qpa2orF+ImPJmSJVBOMfL21rRXe4RIJKqVWUHqpUdfoR66rdt2lZVjUm3wsQMZI0Vn2Xt+rpTA9thUY6Moww++j+UH6i/AVHcmtPUxzxLLDJyU9ip1sZZCcl2J92OuLtt5dpXeGkp5TLS1UZZef5lZT2+nXXHPXTMe5R/GNpDsSWNMnlKhbA9A2TqdbHiNJZvi5uZE8h4Iq5OAcaIWPd9x3nJV26+vHMjQgL5UIUgZweg79xojtu3crDDRTEgplG4Ng/mOtubOVnfGTADRktl0osrFIs8L4BxLEVz9D2OidVd6ChwJ5WDN2VULMfsMnS1U2eltiR+QOEmcj8RJJ/XRCvtK3VopnkkjfiMeW5Qn7jR/yLK6yYm+ItatVPap6ViU5umWUqVYYOCD8xoB5vXVGum3Yq17VbpnkkVqnJkY5YfhPr6+mvV+yGi/nNV/hT/vV61LDUHawVtyJWSsqbZWx1lJJwmj7ZGQR6gj1Gnbb1+YSsZD1ZyX49ApJzpOpIgqZI1ulNXJFUVlGnmRR485QMkD+LHrjpnXqwBplLFY71dTeLpUwyQlIVOCAe7A+/wD5r1S3K80ktQ9QHljRcxyYxxx69OnXS/ZdxQVlJHDNO0E0KHEytxOur7uGOG3ikp6hpnlUHkz8iRn11DiesRnNccsygbQrmvO5CJMlaODzDjtzOAB/v+mqHn30neHNhltG3vi6sEVdcRKwbuifug+/Uk/XThplS8VxPmXPzcmfKM8zW+n5TpxJLKq8gSSDg9AfmNVDwqgpdwbPnhclKuCrdmkXupYDiceox0x7ahwUZboM9NUbwYvQtm8jQSNiG4xGMD+ov4l/5D76qaxgyYsbORGq+eF9I07TPHJSszZM1N1Rj7g9v9NZWbw/t1trFqA81dU5HleaoAVvQgDudWgFeBLYKkevy1KLRvK4DxUqbHNa6OCBHlQBGYuFCllZSTjJGOmB39NQNR6B1ELeOyNxxte5qWSpr7Y6eVPbFKyIzYchegbBA6N3BBOjlHP8XSRzMFicgh42YEowOGX7EEamvjBtwV1nh3JRLmaiHCo4jBaEnv8A2nr9CdR2DcN8pYVhprvWRxL+VEmIA9dJC+oUmf/Z</field>
         </record>
-        -->
+
+        <!-- Película -->
+        <record id="drm_pelicula_id" model="drm_videoclub.pelicula">
+            <field name="drm_nombre">Spider-Man</field>
+            <field name="drm_sinopsis">Tras la muerte de sus padres, Peter Parker, un tímido estudiante, vive con su tía May y su tío Ben. Precisamente debido a su retraimiento no es un chico muy popular en el instituto. Un día le muerde una araña que ha sido modificada genéticamente; a la mañana siguiente, descubre estupefacto que posee la fuerza y la agilidad de ese insecto.</field>
+            <field name="drm_duracion">121</field>
+            <field name="drm_precio">4.95</field>
+            <field name="drm_ejemplares">50</field>
+            <field name="drm_fecha_salida">2002-06-21 00:00:00</field>
+            <field name="drm_portada">/9j/4AAQSkZJRgABAQEAYABgAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2ODApLCBxdWFsaXR5ID0gNzUK/9sAQwAIBgYHBgUIBwcHCQkICgwUDQwLCwwZEhMPFB0aHx4dGhwcICQuJyAiLCMcHCg3KSwwMTQ0NB8nOT04MjwuMzQy/9sAQwEJCQkMCwwYDQ0YMiEcITIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIy/8AAEQgAQAArAwEiAAIRAQMRAf/EABsAAAMAAwEBAAAAAAAAAAAAAAUGBwIECAMA/8QAMBAAAgECBAQEBgIDAQAAAAAAAQIDBBEABSExBhITQSJRYXEHFIGRobEjUiQy4UL/xAAYAQADAQEAAAAAAAAAAAAAAAADBAUBAv/EACMRAAICAQQCAwEBAAAAAAAAAAECAAMRBBIhMRNBUbHxgfD/2gAMAwEAAhEDEQA/AJaaCvkqTl1PRJCsagu7NzEqRe9/LA+rhowFhgkMqIPEwXbzscUWs4YinqYgnWgp2QR8vU1Yb79+2nphPzmGPL5RHGDyICutvr+sJU6gORiUW07bC3oQRT5TJmNcEmq44woF2PiNhpoB7d7Y92ooYqg09JT9dibI0h3PttfBFno6PL70EkknXRTITpr/AFA874fqL4T11Rw8leXelzDk6jLK1lZt1VRa4IH/AKO57d8bZqQnLnAmChQBnsydRZFLKhapp9TchdrnzFu34xrSQwwSGPkp15dLEEnDjU5iy0hpqqR6auW4nV4B4yO4YDX27YXH4cqqlzOsYKyeIFpNT9r/ALxldxPLnE5spK8KJ0BmvCvzNdTxQR2jhRXLc2rMfPyA/P0xIOLsmiFUWpZJJBGGLSCxDtfQqLA2Pr98XXjWjgi4Y+alaSNomBXpuRzXGoY/1IGOes1zKebNWdKg6nxAbD0Hl7YUppeqzGfyOUHyVFmPHX9gDLKwZbn1BUzRdaOnqI6h4r25wrAkfjF7y34gvx5NPR5JAaR4UD1EtSQyxqTYcoH+x97D32xz7XyJBK6xr/I+58sNfw2zKHh3NWqq2FhBUx9AVNzaEk3uR3Btv2388Ma6kWUFscjr8iajbbgGOXE2Tvl/Xl+YSpaZx/kSgmWPS2lvDY6309O2A6SLAgiQ+FRYYaeKJFakcuykmxVbi5F9x54SyxBtqbaXxJ0rNZVlpUsGOpWviRWfMRU+WmfpBYw8gXW19vrYfnEtimoMiyyalgUMksvUZ3RWYtaw8Vrgenvim8e8IVfEzT5tl1WsZo4ek8PSLGYqL6EHQ62xC6/J87q5BA9JLFEP9i2ob7YpbC1hJfAP1AU3VpQAFyw+4Tr6KGpdZZUSRvbX2/5tglT1uVnLTRPEsbOOUoLfjAeZZ4KKKkbmFQIHPMxuWZNrfQ/vBZ4aDKpqeoL/ADuV1UCXlaIXBKgkEeh003t6YDYo2gE5+MRvyKxyF5Pc+y9jRSpSVb2ppD/FP+lJ/qe3kdMbc0HLMyqtgO1sY02VxyUM8KRMIp5WeGOQnwLbQa30NvvY4CNV5rTMYI3hdI/CDMo59Ox13G30wIL5WJU8wO7xjDDidIcP1KQZFSieZFneLryguARzeLX7jGFZR5NUhppI4BzamRXCg673HrhUqM2qb8sDKicqjmut20287e+PF8xr3Kqao201BWwxNbUqy4Jiy6W0NuBgvjHhRZs3oanJlgkjjilSoSWpC8ocCzD0/wCYVco4UzOSmejzfpwZdAzRqSw/kF7gg31GumHSWvqF0arYjuLfjbbGhPW1T2KVRIttoLY7GotCbBjHz7/3MaSt/ZmMsFNRwpFG4KxKFFyMLVXTUk1VJJJBE7HdmUEnTG1VVtQtyZ2bXa+BctVeRiWFz64Lp6mXnPMNYRjBn//Z</field>
+            <!-- Many2Many -->
+            <field name="drm_categoria_ids" eval="[(6, 0, [ref('drm_categoria_id')])]"/>
+            <field name="drm_actor_ids" eval="[(6, 0, [ref('drm_actor_id')])]"/>
+            <!-- Many2one -->
+            <field name="drm_director_id" ref="drm_director_id"/>
+        </record>
     </data>
 </odoo>

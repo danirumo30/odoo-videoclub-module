@@ -21,7 +21,7 @@
         <form string="">
           <sheet>
             <group>
-              <field name="drm_foto" widget="image" class="oe_avatar"/>
+              <field name="drm_foto" widget="image" class="oe_avatar_left"/>
               <field name="drm_nombre"/>
               <field name="drm_nacionalidad"/>
               <field name="drm_fecha_nacimiento"/>
