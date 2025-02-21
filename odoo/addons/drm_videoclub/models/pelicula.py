@@ -15,8 +15,28 @@ class Pelicula(models.Model):
     drm_portada = fields.Image(string='Portada', max_width = 64, max_height = 64, help='Sube la imagen de la portada de la película')
     
     # Relaciones Many2Many
-    drm_categoria_ids = fields.Many2many('drm_videoclub.categoria', string='Categorías', help='Selecciona las categorías de la película')
-    drm_actor_ids = fields.Many2many('drm_videoclub.actor', string='Actores', help='Selecciona los actores de la película')
+    drm_categoria_ids = fields.Many2many(
+        'drm_videoclub.categoria', 
+        string='Categorías', 
+        help='Selecciona las categorías de la película'
+        )
+    drm_actor_ids = fields.Many2many(
+        'drm_videoclub.actor', 
+        string='Actores', 
+        help='Selecciona los actores de la película'
+        )
     
     # Relación Many2One
-    drm_director_id = fields.Many2one('drm_videoclub.director', string='Director', help='Selecciona el director de la película')
+    drm_director_id = fields.Many2one(
+        'drm_videoclub.director', 
+        string='Director', 
+        help='Selecciona el director de la película'
+        )
+    
+     # Campo relacionado para mostrar el nombre del director
+    drm_director_nombre = fields.Char(
+        string='Nombre del Director', 
+        related='drm_director_id.drm_nombre', 
+        store=True,  # Hacerlo persistente para optimizar consultas
+        help='Nombre del director de la película'
+    )

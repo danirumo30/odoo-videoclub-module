@@ -1,22 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data noupdate="1">
-        <record id="idCategoria" model="ir.module.category">
-            <field name="name">NombreGrupo</field>
-            <field name="description">Descripción...</field>
+        <!-- Categoría del módulo -->
+        <record id="drm_videoclub_category" model="ir.module.category">
+            <field name="name">Gestión de Videoclub</field>
+            <field name="description">Módulo de gestión de películas, actores, directores, y categorías de videoclub</field>
         </record>
+
+        <!-- Grupos de seguridad -->
+        <record id="drm_videoclub_user" model="res.groups">
+            <field name="name">Videoclub / User</field>
+            <field name="comment">Empleado con permisos básicos</field>
+            <field name="category_id" ref="drm_videoclub_category"/>
+        </record>
+
         <record id="drm_videoclub_manager" model="res.groups">
-            <field name="name">NombreGrupo</field>
-            <field name="category_id" ref="..."/>
-            <field name="implied_ids" eval="..."/>
-            <field name="users" eval="..."/>
+            <field name="name">Videoclub / Manager</field>
+            <field name="comment">Empleado con todos los permisos</field>
+            <field name="category_id" ref="drm_videoclub_category"/>
+            <field name="implied_ids" eval="[(4, ref('drm_videoclub_user'))]"/>
+            <field name="users" eval="[(4,ref('base.user_root')),(4,ref('base.user_admin'))]"/>
         </record>
-        <record id="drm_videoclub_user" model="res.users">
-            <field name="">Videoclub / Usuario</field>
+
+        <!-- Reglas de acceso para modelos -->
+        <!-- Reglas para los usuarios administradores -->
+        <record id="drm_videoclub_categoria_manager_rule" model="ir.rule">
+            <field name="name">Acceso a Categorías</field>
+            <field name="model_id" ref="drm_videoclub.categoria"/>
+            <field name="groups" eval="[(4, ref('drm_videoclub_manager'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
         </record>
-        <record id="idRegla" model="ir.rule">
-            <!-- Definición de reglas de negocio y asignación
-            a grupos y/o companias -->
+
+        <record id="drm_videoclub_pelicula_manager_rule" model="ir.rule">
+            <field name="name">Acceso a Películas</field>
+            <field name="model_id" ref="drm_videoclub.pelicula"/>
+            <field name="groups" eval="[(4, ref('drm_videoclub_manager'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <record id="drm_videoclub_director_manager_rule" model="ir.rule">
+            <field name="name">Acceso a Directores</field>
+            <field name="model_id" ref="drm_videoclub.director"/>
+            <field name="groups" eval="[(4, ref('drm_videoclub_manager'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <record id="drm_videoclub_actor_manager_rule" model="ir.rule">
+            <field name="name">Acceso a Actores</field>
+            <field name="model_id" ref="drm_videoclub.actor"/>
+            <field name="groups" eval="[(4, ref('drm_videoclub_manager'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <!-- Reglas para los usuarios básicos -->
+        <record id="drm_videoclub_categoria_user_rule" model="ir.rule">
+            <field name="name">Acceso a Categorías (Usuario)</field>
+            <field name="model_id" ref="drm_videoclub.categoria"/>
+            <field name="groups" eval="[(4, ref('drm_videoclub_user'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <record id="drm_videoclub_pelicula_user_rule" model="ir.rule">
+            <field name="name">Acceso a Películas (Usuario)</field>
+            <field name="model_id" ref="drm_videoclub.pelicula"/>
+            <field name="groups" eval="[(4, ref('drm_videoclub_user'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <record id="drm_videoclub_director_user_rule" model="ir.rule">
+            <field name="name">Acceso a Directores (Usuario)</field>
+            <field name="model_id" ref="drm_videoclub.director"/>
+            <field name="groups" eval="[(4, ref('drm_videoclub_user'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <record id="drm_videoclub_actor_user_rule" model="ir.rule">
+            <field name="name">Acceso a Actores (Usuario)</field>
+            <field name="model_id" ref="drm_videoclub.actor"/>
+            <field name="groups" eval="[(4, ref('drm_videoclub_user'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="False"/>
         </record>
     </data>
 </odoo>

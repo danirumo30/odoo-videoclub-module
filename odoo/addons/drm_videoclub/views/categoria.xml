@@ -6,6 +6,7 @@
       <field name="arch" type="xml">
         <tree string="Categoria">
           <field name="drm_nombre"/>
+          <field name="drm_pelicula_ids"/>
         </tree>
       </field>
     </record>
@@ -17,6 +18,15 @@
           <sheet>
             <group>
               <field name="drm_nombre"/>
+              <field name="drm_pelicula_ids">
+                <tree string="Películas del Actor">
+                  <field name="drm_portada" widget="image" class="oe_avatar_left"/>
+                  <field name="drm_nombre"/>
+                  <field name="drm_sinopsis"/>
+                  <field name="drm_duracion"/>
+                  <field name="drm_precio"/>
+                </tree>
+              </field>
             </group>
           </sheet>
         </form>

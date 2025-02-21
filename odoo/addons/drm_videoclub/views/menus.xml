@@ -3,7 +3,7 @@
     <record id="drm_videoclub.pelicula_action" model="ir.actions.act_window">
         <field name="name">Película</field>
         <field name="res_model">drm_videoclub.pelicula</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">kanban,tree,form</field>
     </record>
 
     <record id="drm_videoclub.categoria_action" model="ir.actions.act_window">
@@ -15,13 +15,13 @@
     <record id="drm_videoclub.director_action" model="ir.actions.act_window">
         <field name="name">Director</field>
         <field name="res_model">drm_videoclub.director</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">kanban,tree,form</field>
     </record>
 
     <record id="drm_videoclub.actor_action" model="ir.actions.act_window">
         <field name="name">Actor</field>
         <field name="res_model">drm_videoclub.actor</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">kanban,tree,form</field>
     </record>
 
     <menuitem

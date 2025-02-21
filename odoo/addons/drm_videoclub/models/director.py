@@ -13,4 +13,9 @@ class Director(models.Model):
     drm_foto = fields.Image(string='Foto', max_width = 64, max_height = 64, help='Sube la imagen del director')
 
     # Relación One2many
-    drm_pelicula_ids = fields.One2many('drm_videoclub.pelicula', 'drm_director_id', string='Películas dirigidas')
+    drm_pelicula_ids = fields.One2many(
+        'drm_videoclub.pelicula', 
+        'drm_director_id', 
+        string='Películas dirigidas',
+        help='Selecciona las películas que ha dirigido'
+        )

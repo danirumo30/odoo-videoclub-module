@@ -12,19 +12,9 @@
           <field name="drm_precio"/>
           <field name="drm_ejemplares"/>
           <field name="drm_fecha_salida"/>
-          <field name="drm_categoria_ids" widget="many2many_tags" options="{'separator': ', '}" string="Categorías">
-            <attribute name="widget">many2many_tags</attribute>
-            <attribute name="options">{'separator': ', '}</attribute>
-            <attribute name="context">{'default_drm_nombre': 'drm_nombre'}</attribute>
-          </field>
-          <field name="drm_actor_ids" widget="many2many_tags" options="{'separator': ', '}" string="Actores">
-            <attribute name="widget">many2many_tags</attribute>
-            <attribute name="options">{'separator': ', '}</attribute>
-            <attribute name="context">{'default_drm_nombre': 'drm_nombre'}</attribute>
-          </field>
-          <field name="drm_director_id" widget="many2one" string="Director" options="{'no_open': True}">
-            <attribute name="context">{'default_drm_nombre': 'drm_nombre'}</attribute>
-          </field>
+          <field name="drm_categoria_ids"/>
+          <field name="drm_actor_ids"/>
+          <field name="drm_director_nombre"/>
         </tree>
       </field>
     </record>
@@ -42,12 +32,56 @@
               <field name="drm_precio"/>
               <field name="drm_ejemplares"/>
               <field name="drm_fecha_salida"/>
-              <field name="drm_categoria_ids"/>
-              <field name="drm_actor_ids"/>
-              <field name="drm_director_id"/>
+              <field name="drm_categoria_ids">
+                <tree string="Categorías de la Película">
+                  <field name="drm_nombre"/>
+                </tree>
+              </field>
+              <field name="drm_actor_ids">
+                <tree string="Actores de la Película">
+                  <field name="drm_foto" widget="image" class="oe_avatar_left"/>
+                  <field name="drm_nombre"/>
+                </tree>
+              </field>
+              <field name="drm_director_id" widget="many2one_avatar"/>
             </group>
           </sheet>
         </form>
+      </field>
+    </record>
+    <record id="drm_videoclub.pelicula_kanban" model="ir.ui.view">
+      <field name="name">drm_videoclub.pelicula.kanban</field>
+      <field name="model">drm_videoclub.pelicula</field>
+      <field name="arch" type="xml">
+        <kanban string="Películas">
+          <templates>
+            <t t-name="kanban-box">
+              <div class="oe_kanban_global">
+                <div class="card-header d-flex justify-content-between aling-items-center">
+                  <strong class="text-primary"><field name="drm_nombre"/>
+                  </strong>
+                </div>
+                <div class="card-body">
+                  <div class="mt-2">
+                    <field name="drm_portada" widget="image" class="oe_avatar_left"/>
+                  </div>
+                  <div class="mt-2">
+                    PRECIO - <field name="drm_precio"/>€
+                  </div>
+                  <div class="mt-2">
+                    DURACIÓN - <field name="drm_duracion"/>MIN
+                  </div>
+                  <div class="mt-2">
+                    SINOPSIS - <field name="drm_sinopsis"/>
+                  </div>
+                  <div class="mt-2">
+                    DIRECTOR - <field name="drm_director_nombre"/>
+                  </div>
+                </div>
+              </div>
+            </t>
+          </templates>
+        </kanban>
       </field>
     </record>
   </data>

@@ -13,4 +13,8 @@ class Actor(models.Model):
     drm_foto = fields.Image(string='Foto', max_width = 64, max_height = 64, help='Sube la imagen del actor')
 
     # Relación Many2many
-    drm_pelicula_ids = fields.Many2many('drm_videoclub.pelicula', 'drm_pelicula_actor_rel', 'drm_actor_id', 'drm_pelicula_id', string='Películas en las que ha actuado')
+    drm_pelicula_ids = fields.Many2many(
+        'drm_videoclub.pelicula', 
+        string='Películas realizadas',
+        help='Selecciona las películas en las que ha actuado'
+        )

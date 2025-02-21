@@ -26,10 +26,50 @@
               <field name="drm_nacionalidad"/>
               <field name="drm_fecha_nacimiento"/>
               <field name="drm_biografia"/>
-              <field name="drm_pelicula_ids"/>
+              <field name="drm_pelicula_ids">
+                <tree string="Películas del Actor">
+                  <field name="drm_portada" widget="image" class="oe_avatar_left"/>
+                  <field name="drm_nombre"/>
+                  <field name="drm_sinopsis"/>
+                  <field name="drm_duracion"/>
+                  <field name="drm_precio"/>
+                </tree>
+              </field>
             </group>
           </sheet>
         </form>
+      </field>
+    </record>
+    <record id="drm_videoclub.actor_kanban" model="ir.ui.view">
+      <field name="name">drm_videoclub.actor.kanban</field>
+      <field name="model">drm_videoclub.actor</field>
+      <field name="arch" type="xml">
+        <kanban string="Actores">
+          <templates>
+            <t t-name="kanban-box">
+              <div class="oe_kanban_global">
+                <div class="card-header d-flex justify-content-between aling-items-center">
+                  <strong class="text-primary"><field name="drm_nombre"/>
+                  </strong>
+                </div>
+                <div class="card-body">
+                  <div class="mt-2">
+                    <field name="drm_foto" widget="image" class="oe_avatar_left"/>
+                  </div>
+                  <div class="mt-2">
+                    NOMBRE - <field name="drm_nombre"/>MIN
+                  </div>
+                  <div class="mt-2">
+                    NACIONALIDAD - <field name="drm_nacionalidad"/>
+                  </div>
+                  <div class="mt-2">
+                    FECHA DE NACIMIENTO - <field name="drm_fecha_nacimiento"/>
+                  </div>
+                </div>
+              </div>
+            </t>
+          </templates>
+        </kanban>
       </field>
     </record>
   </data>

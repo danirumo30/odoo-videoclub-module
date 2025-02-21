@@ -28,7 +28,7 @@ Long description of module's purpose
         'views/director.xml',
         'views/actor.xml',
         #'security/security.xml',
-        #'security/ir.model.access.csv'
+        #'security/ir.model.access.csv',
     ],
     # only loaded in demonstration mode
     'demo': [
