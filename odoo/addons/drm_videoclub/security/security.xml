@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="idCategoria" model="ir.module.category">
+            <field name="name">NombreGrupo</field>
+            <field name="description">Descripción...</field>
+        </record>
+        <record id="drm_videoclub_manager" model="res.groups">
+            <field name="name">NombreGrupo</field>
+            <field name="category_id" ref="..."/>
+            <field name="implied_ids" eval="..."/>
+            <field name="users" eval="..."/>
+        </record>
+        <record id="drm_videoclub_user" model="res.users">
+            <field name="">Videoclub / Usuario</field>
+        </record>
+        <record id="idRegla" model="ir.rule">
+            <!-- Definición de reglas de negocio y asignación
+            a grupos y/o companias -->
+        </record>
+    </data>
+</odoo>
