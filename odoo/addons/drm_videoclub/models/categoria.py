@@ -13,4 +13,4 @@ class Categoria(models.Model):
         'drm_videoclub.pelicula',
         string='Películas',
         help='Selecciona películas que pertenecen a esta categoria'
-        )
+    )

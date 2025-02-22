@@ -1,9 +1,9 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-drm_videoclub_categoria_manager_rule,Acceso a Categorías,drm_videoclub.categoria,drm_videoclub_manager,True,True,True,True
-drm_videoclub_pelicula_manager_rule,Acceso a Películas,drm_videoclub.pelicula,drm_videoclub_manager,True,True,True,True
-drm_videoclub_director_manager_rule,Acceso a Directores,drm_videoclub.director,drm_videoclub_manager,True,True,True,True
-drm_videoclub_actor_manager_rule,Acceso a Actores,drm_videoclub.actor,drm_videoclub_manager,True,True,True,True
-drm_videoclub_categoria_user_rule,Acceso a Categorías (Usuario),drm_videoclub.categoria,drm_videoclub_user,True,True,True,False
-drm_videoclub_pelicula_user_rule,Acceso a Películas (Usuario),drm_videoclub.pelicula,drm_videoclub_user,True,True,True,False
-drm_videoclub_director_user_rule,Acceso a Directores (Usuario),drm_videoclub.director,drm_videoclub_user,True,True,True,False
-drm_videoclub_actor_user_rule,Acceso a Actores (Usuario),drm_videoclub.actor,drm_videoclub_user,True,True,True,False
+access_drm_videoclub_pelicula,drm_videoclub.pelicula,model_drm_videoclub_pelicula,base.group_user,1,1,1,0
+access_drm_videoclub_pelicula_admin,drm_videoclub.pelicula,model_drm_videoclub_pelicula,base.group_system,1,1,1,1
+access_drm_videoclub_categoria,drm_videoclub.categoria,model_drm_videoclub_categoria,base.group_user,1,1,1,0
+access_drm_videoclub_categoria_admin,drm_videoclub.categoria,model_drm_videoclub_categoria,base.group_system,1,1,1,1
+access_drm_videoclub_director,drm_videoclub.director,model_drm_videoclub_director,base.group_user,1,1,1,0
+access_drm_videoclub_director_admin,drm_videoclub.director,model_drm_videoclub_director,base.group_system,1,1,1,1
+access_drm_videoclub_actor,drm_videoclub.actor,model_drm_videoclub_actor,base.group_user,1,1,1,0
+access_drm_videoclub_actor_admin,drm_videoclub.actor,model_drm_videoclub_actor,base.group_system,1,1,1,1

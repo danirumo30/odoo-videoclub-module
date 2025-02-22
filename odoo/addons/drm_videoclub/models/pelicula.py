@@ -19,19 +19,19 @@ class Pelicula(models.Model):
         'drm_videoclub.categoria', 
         string='Categorías', 
         help='Selecciona las categorías de la película'
-        )
+    )
     drm_actor_ids = fields.Many2many(
         'drm_videoclub.actor', 
         string='Actores', 
         help='Selecciona los actores de la película'
-        )
+    )
     
     # Relación Many2One
     drm_director_id = fields.Many2one(
         'drm_videoclub.director', 
         string='Director', 
         help='Selecciona el director de la película'
-        )
+    )
     
     # Campo relacionado para mostrar el nombre del director
     drm_director_nombre = fields.Char(

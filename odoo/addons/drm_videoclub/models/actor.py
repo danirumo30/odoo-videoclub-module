@@ -4,6 +4,7 @@ from odoo import models, fields
 
 class Actor(models.Model):
     _name = 'drm_videoclub.actor'
+    _inherit = 'drm_videoclub.persona'
     _description = 'Actor'
     
     drm_nombre = fields.Char(string='Nombre', required=True, help='Introduce el nombre del actor')
@@ -17,4 +18,4 @@ class Actor(models.Model):
         'drm_videoclub.pelicula', 
         string='Películas realizadas',
         help='Selecciona las películas en las que ha actuado'
-        )
+    )

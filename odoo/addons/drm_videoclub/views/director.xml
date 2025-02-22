@@ -3,68 +3,64 @@
     <record id="drm_videoclub.director_tree" model="ir.ui.view">
       <field name="name">drm_videoclub.director.tree</field>
       <field name="model">drm_videoclub.director</field>
+      <field name="inherit_id" ref="drm_videoclub.persona_base_tree"/>
       <field name="arch" type="xml">
-        <tree string="Director">
-          <field name="drm_foto" widget="image" class="oe_avatar"/>
-          <field name="drm_nombre"/>
-          <field name="drm_nacionalidad"/>
-          <field name="drm_fecha_nacimiento"/>
-          <field name="drm_biografia"/>
+        <xpath expr="//field[@name='drm_biografia']" position="after">
           <field name="drm_pelicula_ids"/>
-        </tree>
+        </xpath>
       </field>
     </record>
+
     <record id="drm_videoclub.director_form" model="ir.ui.view">
       <field name="name">drm_videoclub.director.form</field>
       <field name="model">drm_videoclub.director</field>
+      <field name="inherit_id" ref="drm_videoclub.persona_base_form"/>
       <field name="arch" type="xml">
         <form string="">
           <sheet>
             <group>
-              <field name="drm_foto" widget="image" class="oe_avatar_left"/>
-              <field name="drm_nombre"/>
-              <field name="drm_nacionalidad"/>
-              <field name="drm_fecha_nacimiento"/>
-              <field name="drm_biografia"/>
               <field name="drm_pelicula_ids">
-                <tree string="Películas dirigidas">
-                    <field name="drm_portada" widget="image" class="oe_avatar_left"/>
-                    <field name="drm_nombre"/>
-                    <field name="drm_sinopsis"/>
-                    <field name="drm_duracion"/>
-                    <field name="drm_precio"/>
-                    <field name="drm_fecha_salida"/>
+                <tree string="Películas">
+                  <field name="drm_portada" widget="image" class="oe_avatar_left"/>
+                  <field name="drm_nombre"/>
+                  <field name="drm_sinopsis"/>
+                  <field name="drm_duracion"/>
+                  <field name="drm_precio"/>
                 </tree>
               </field>
-            </group>
+            </group>  
           </sheet>
         </form>
       </field>
     </record>
+
     <record id="drm_videoclub.director_kanban" model="ir.ui.view">
       <field name="name">drm_videoclub.director.kanban</field>
       <field name="model">drm_videoclub.director</field>
       <field name="arch" type="xml">
-        <kanban string="Directores">
+        <kanban string="">
           <templates>
             <t t-name="kanban-box">
-              <div class="oe_kanban_global">
+              <div class="oe_kanban_global_click card p-2">
                 <div class="card-header d-flex justify-content-between aling-items-center">
-                  <strong class="text-primary"><field name="drm_nombre"/>
+                  <strong class="text-primary">
+                    <field name="drm_nombre"/>
                   </strong>
                 </div>
-                <div class="card-body">
-                  <div class="mt-2">
-                    <field name="drm_foto" widget="image" class="oe_avatar_left"/>
+                <div class="card-body d-flex flex-row align-items-start">
+                  <div class="flex-grow-1">
+                    <div class="mt-2">
+                      <i class="fa fa-user"></i> <strong><em>NOMBRE</em></strong> - <field name="drm_nombre"/>
+                    </div>
+                    <div class="mt-2">
+                      <i class="fa fa-flag"></i> <strong><em>NACIONALIDAD</em></strong> - <field name="drm_nacionalidad"/>
+                    </div>
+                    <div class="mt-2">
+                      <i class="fa fa-calendar"></i> <strong><em>FECHA DE NACIMIENTO</em></strong> - <field name="drm_fecha_nacimiento"/>
+                    </div>
                   </div>
-                  <div class="mt-2">
-                    NOMBRE - <field name="drm_nombre"/>MIN
-                  </div>
-                  <div class="mt-2">
-                    NACIONALIDAD - <field name="drm_nacionalidad"/>
-                  </div>
-                  <div class="mt-2">
-                    FECHA DE NACIMIENTO - <field name="drm_fecha_nacimiento"/>
+                  <div class="ms-3">
+                      <field name="drm_foto" widget="image" class="oe_avatar_left" style="width: 64px; height: 64px"/>
                   </div>
                 </div>
               </div>
