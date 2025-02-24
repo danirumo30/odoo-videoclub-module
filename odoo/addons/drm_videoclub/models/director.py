@@ -5,6 +5,7 @@ from odoo import models, fields
 class Director(models.Model):
     _name = 'drm_videoclub.director'
     _description = 'Director'
+    _rec_name = 'drm_nombre'
     
     drm_nombre = fields.Char(string='Nombre', required=True, help='Introduce el nombre del director')
     drm_nacionalidad = fields.Char(string='Nacionalidad', required=True, help='Introduce la nacionalidad del director')
