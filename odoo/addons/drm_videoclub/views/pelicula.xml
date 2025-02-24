@@ -14,7 +14,7 @@
           <field name="drm_fecha_salida"/>
           <field name="drm_categoria_ids"/>
           <field name="drm_actor_ids"/>
-          <field name="drm_director_nombre"/>
+          <field name="drm_director_id"/>
         </tree>
       </field>
     </record>

@@ -5,6 +5,7 @@ from odoo import models, fields
 class Pelicula(models.Model):
     _name = 'drm_videoclub.pelicula'
     _description = 'Película'
+    _rec_name = 'drm_nombre'
     
     drm_nombre = fields.Char(string='Título', required=True, help='Introduce el título de la película')
     drm_sinopsis = fields.Char(string='Sinopsis', required=True, help='Introduce la sinopsis de la película')
@@ -39,3 +40,4 @@ class Pelicula(models.Model):
         related='drm_director_id.drm_nombre', 
         help='Nombre del director de la película'
     )
+        )

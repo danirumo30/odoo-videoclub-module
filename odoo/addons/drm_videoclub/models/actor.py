@@ -6,6 +6,7 @@ class Actor(models.Model):
     _name = 'drm_videoclub.actor'
     _inherit = 'drm_videoclub.persona'
     _description = 'Actor'
+    _rec_name = 'drm_nombre'
     
     drm_nombre = fields.Char(string='Nombre', required=True, help='Introduce el nombre del actor')
     drm_nacionalidad = fields.Char(string='Nacionalidad', required=True, help='Introduce la nacionalidad del actor')
