@@ -24,7 +24,6 @@ Long description of module's purpose
     'data': [
         'security/ir.model.access.csv',
         'views/menus.xml',
-        'views/persona.xml',
         'views/pelicula.xml',
         'views/categoria.xml',
         'views/director.xml',

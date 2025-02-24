@@ -33,11 +33,3 @@ class Pelicula(models.Model):
         string='Director', 
         help='Selecciona el director de la película'
     )
-    
-    # Campo relacionado para mostrar el nombre del director
-    drm_director_nombre = fields.Char(
-        string='Nombre del Director', 
-        related='drm_director_id.drm_nombre', 
-        help='Nombre del director de la película'
-    )
-        )

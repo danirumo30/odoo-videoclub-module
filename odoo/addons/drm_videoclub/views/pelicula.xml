@@ -71,7 +71,7 @@
                                      <i class="fa fa-hourglass-start"></i> <strong><em>DURACIÓN</em></strong> - <field name="drm_duracion"/> MIN
                                   </div>
                                   <div class="mt-2">
-                                      <i class="fa fa-user"></i> <strong><em>DIRECTOR</em></strong> - <field name="drm_director_nombre"/>
+                                      <i class="fa fa-user"></i> <strong><em>DIRECTOR</em></strong> - <field name="drm_director_id"/>
                                   </div>
                                   <div class="mt-2">
                                       <i class="fa fa-info-circle"></i> <strong><em>SINOPSIS</em></strong> - <field name="drm_sinopsis"/>
