@@ -1,0 +1,39 @@
+<odoo>
+    <data>
+        <report
+            id="drm_videoclub_report_pelicula"
+            model="drm_videoclub.pelicula"
+            string="Informe de Pelicula"
+            name="drm_videoclub.report_pelicula_template"
+            file="drm_videoclub.report_pelicula_template"
+            report_type="qweb-html"/>
+
+        <template id="drm_videoclub.report_pelicula_template">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <t t-foreach="docs" t-as="pelicula">
+                        <div class="page">
+                            <h2 t-field="pelicula.drm_nombre"/>
+                            <div>
+                                <strong>Duración:</strong>
+                                <span t-field="pelicula.drm_duracion"/>
+                            </div>
+                            <div>
+                                <strong>Fecha de Salida:</strong>
+                                <span t-field="pelicula.drm_fecha_salida"/>
+                            </div>
+                            <div>
+                                <strong>Sinopsis:</strong>
+                                <span t-field="pelicula.drm_sinopsis"/>
+                            </div>
+                            <div>
+                                <strong>Precio:</strong>
+                                <span t-field="pelicula.drm_precio"/>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

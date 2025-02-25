@@ -1,5 +1,12 @@
 <odoo>
   <data>
+    <record id="drm_videoclub_action_report_actor" model="ir.actions.report">
+      <field name="name">Informe de Actor</field>
+      <field name="model">drm_videoclub.actor</field>
+      <field name="report_name">drm_videoclub.report_actor_template</field>
+      <field name="report_type">qweb-html</field>
+    </record>
+    
     <record id="drm_videoclub.actor_tree" model="ir.ui.view">
       <field name="name">drm_videoclub.actor.tree</field>
       <field name="model">drm_videoclub.actor</field>
@@ -37,6 +44,7 @@
                 </tree>
               </field>
             </group>
+            <button name="%(drm_videoclub_action_report_actor)d" type="action" string="Imprimir Informe" class="oe_highlight"/>
           </sheet>
         </form>
       </field>

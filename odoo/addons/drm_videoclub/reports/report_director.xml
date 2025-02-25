@@ -1,0 +1,35 @@
+<odoo>
+    <data>
+        <report
+            id="drm_videoclub_report_director"
+            model="drm_videoclub.director"
+            string="Informe de Director"
+            name="drm_videoclub.report_director_template"
+            file="drm_videoclub.report_director_template"
+            report_type="qweb-html"/>
+
+        <template id="drm_videoclub.report_director_template">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <t t-foreach="docs" t-as="director">
+                        <div class="page">
+                            <h2 t-field="director.drm_nombre"/>
+                            <div>
+                                <strong>Nacionalidad:</strong>
+                                <span t-field="director.drm_nacionalidad"/>
+                            </div>
+                            <div>
+                                <strong>Fecha de Nacimiento:</strong>
+                                <span t-field="director.drm_fecha_nacimiento"/>
+                            </div>
+                            <div>
+                                <strong>Biografía:</strong>
+                                <span t-field="director.drm_biografia"/>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

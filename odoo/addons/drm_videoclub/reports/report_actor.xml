@@ -16,15 +16,15 @@
                             <h2 t-field="actor.drm_nombre"/>
                             <div>
                                 <strong>Nacionalidad:</strong>
-                                <span t-field=actor.drm_nacionalidad/>
+                                <span t-field="actor.drm_nacionalidad"/>
                             </div>
                             <div>
                                 <strong>Fecha de Nacimiento:</strong>
-                                <span t-field=actor.drm_fecha_nacimiento/>
+                                <span t-field="actor.drm_fecha_nacimiento"/>
                             </div>
                             <div>
                                 <strong>Biografía:</strong>
-                                <span t-field=actor.drm_biografia/>
+                                <span t-field="actor.drm_biografia"/>
                             </div>
                         </div>
                     </t>

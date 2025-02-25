@@ -1,5 +1,12 @@
 <odoo>
   <data>
+    <record id="drm_videoclub_action_report_pelicula" model="ir.actions.report">
+      <field name="name">Informe de Pelicula</field>
+      <field name="model">drm_videoclub.pelicula</field>
+      <field name="report_name">drm_videoclub.report_pelicula_template</field>
+      <field name="report_type">qweb-html</field>
+    </record>
+
     <!--VISTA TREE-->
     <record id="drm_videoclub.pelicula_tree" model="ir.ui.view">
       <field name="name">drm_videoclub.pelicula.tree</field>
@@ -48,6 +55,7 @@
               </field>
               <field name="drm_director_id"/>
             </group>
+            <button name="%(drm_videoclub_action_report_pelicula)d" type="action" string="Imprimir Informe" class="oe_highlight"/>
           </sheet>
         </form>
       </field>

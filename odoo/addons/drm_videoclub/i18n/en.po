@@ -1,0 +1,534 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* drm_videoclub
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20250218\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-25 18:28+0000\n"
+"PO-Revision-Date: 2025-02-25 18:28+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.actor_kanban
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.director_kanban
+msgid ""
+"<i class=\"fa fa-calendar\"/> <strong><em>FECHA DE NACIMIENTO</em></strong> "
+"-"
+msgstr "<i class=\"fa fa-calendar\"/> <strong><em>DATE OF BIRTH</em></strong> -"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.actor_kanban
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.director_kanban
+msgid "<i class=\"fa fa-flag\"/> <strong><em>NACIONALIDAD</em></strong> -"
+msgstr "<i class=\"fa fa-flag\"/> <strong><em>NATIONALITY</em></strong> -"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.pelicula_kanban
+msgid "<i class=\"fa fa-hourglass-start\"/> <strong><em>DURACIÓN</em></strong> -"
+msgstr "<i class=\"fa fa-hourglass-start\"/> <strong><em>DURATION</em></strong> -"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.pelicula_kanban
+msgid "<i class=\"fa fa-info-circle\"/> <strong><em>SINOPSIS</em></strong> -"
+msgstr "<i class=\"fa fa-info-circle\"/> <strong><em>SYNOPSIS</em></strong> -"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.pelicula_kanban
+msgid "<i class=\"fa fa-tag\"/> <strong><em>PRECIO</em></strong> -"
+msgstr "<i class=\"fa fa-tag\"/> <strong><em>PRICE</em></strong> -"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.pelicula_kanban
+msgid "<i class=\"fa fa-user\"/> <strong><em>DIRECTOR</em></strong> -"
+msgstr "<i class=\"fa fa-user\"/> <strong><em>DIRECTOR</em></strong> -"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.actor_kanban
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.director_kanban
+msgid "<i class=\"fa fa-user\"/> <strong><em>NOMBRE</em></strong> -"
+msgstr "<i class=\"fa fa-user\"/> <strong><em>NAME</em></strong> -"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.report_actor_template
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.report_director_template
+msgid "<strong>Biografía:</strong>"
+msgstr "<strong>Biography:</strong>"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.report_pelicula_template
+msgid "<strong>Duración:</strong>"
+msgstr "<strong>Duration:</strong>"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.report_actor_template
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.report_director_template
+msgid "<strong>Fecha de Nacimiento:</strong>"
+msgstr "<strong>Date of Birth:</strong>"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.report_pelicula_template
+msgid "<strong>Fecha de Salida:</strong>"
+msgstr "<strong>Release Date:</strong>"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.report_actor_template
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.report_director_template
+msgid "<strong>Nacionalidad:</strong>"
+msgstr "<strong>Nationality:</strong>"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.report_pelicula_template
+msgid "<strong>Precio:</strong>"
+msgstr "<strong>Price:</strong>"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.report_pelicula_template
+msgid "<strong>Sinopsis:</strong>"
+msgstr "<strong>Synopsis:</strong>"
+
+#. module: drm_videoclub
+#: model:ir.actions.act_window,name:drm_videoclub.actor_action
+#: model:ir.model,name:drm_videoclub.model_drm_videoclub_actor
+msgid "Actor"
+msgstr "Actor"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_pelicula__drm_actor_ids
+#: model:ir.ui.menu,name:drm_videoclub.actor_menu
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.actor_form
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.actor_kanban
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.actor_tree
+msgid "Actores"
+msgstr "Actors"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.pelicula_form
+msgid "Actores de la Película"
+msgstr "Actors of the Movie"
+
+#. module: drm_videoclub
+#: model:res.groups,name:drm_videoclub.group_drm_videoclub_admin
+msgid "Admin"
+msgstr "Admin"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.pelicula_graph
+msgid "Alquileres por Categoría"
+msgstr "Rentals by Category"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_actor__drm_biografia
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_director__drm_biografia
+msgid "Biografía"
+msgstr "Biography"
+
+#. module: drm_videoclub
+#: model:ir.model,name:drm_videoclub.model_drm_videoclub_categoria
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.categoria_tree
+msgid "Categoria"
+msgstr "Category"
+
+#. module: drm_videoclub
+#: model:ir.actions.act_window,name:drm_videoclub.categoria_action
+msgid "Categoría"
+msgstr "Category"
+
+#. module: drm_videoclub
+#: model:ir.module.category,description:drm_videoclub.category_drm_videoclub
+msgid "Categoría para el módulo Videoclub"
+msgstr "Category for the Videoclub module"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_pelicula__drm_categoria_ids
+#: model:ir.ui.menu,name:drm_videoclub.categoria_menu
+msgid "Categorías"
+msgstr "Categories"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.pelicula_form
+msgid "Categorías de la Película"
+msgstr "Categories of the Movie"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_actor__create_uid
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_categoria__create_uid
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_director__create_uid
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_pelicula__create_uid
+msgid "Created by"
+msgstr "Created by"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_actor__create_date
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_categoria__create_date
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_director__create_date
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_pelicula__create_date
+msgid "Created on"
+msgstr "Created on"
+
+#. module: drm_videoclub
+#: model:ir.actions.act_window,name:drm_videoclub.director_action
+#: model:ir.model,name:drm_videoclub.model_drm_videoclub_director
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_pelicula__drm_director_id
+msgid "Director"
+msgstr "Director"
+
+#. module: drm_videoclub
+#: model:ir.ui.menu,name:drm_videoclub.director_menu
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.director_form
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.director_kanban
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.director_tree
+msgid "Directores"
+msgstr "Directors"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_actor__display_name
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_categoria__display_name
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_director__display_name
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_pelicula__display_name
+msgid "Display Name"
+msgstr "Display Name"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_pelicula__drm_duracion
+msgid "Duración"
+msgstr "Duration"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_pelicula__drm_ejemplares
+msgid "Ejemplares"
+msgstr "Copies"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_actor__drm_fecha_nacimiento
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_director__drm_fecha_nacimiento
+msgid "Fecha de Nacimiento"
+msgstr "Date of Birth"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_pelicula__drm_fecha_salida
+msgid "Fecha de salida"
+msgstr "Release Date"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.pelicula_search
+msgid "Filtros por duración"
+msgstr "Filters by duration"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.pelicula_search
+msgid "Filtros por precio"
+msgstr "Filters by price"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_actor__drm_foto
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_director__drm_foto
+msgid "Foto"
+msgstr "Photo"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_actor__id
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_categoria__id
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_director__id
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_pelicula__id
+msgid "ID"
+msgstr "ID"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.actor_form
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.director_form
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.pelicula_form
+msgid "Imprimir Informe"
+msgstr "Print Report"
+
+#. module: drm_videoclub
+#: model:ir.actions.report,name:drm_videoclub.drm_videoclub_action_report_actor
+msgid "Informe de Actor"
+msgstr "Actor Report"
+
+#. module: drm_videoclub
+#: model:ir.actions.report,name:drm_videoclub.drm_videoclub_action_report_director
+msgid "Informe de Director"
+msgstr "Director Report"
+
+#. module: drm_videoclub
+#: model:ir.actions.report,name:drm_videoclub.drm_videoclub_action_report_pelicula
+msgid "Informe de Pelicula"
+msgstr "Movie Report"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,help:drm_videoclub.field_drm_videoclub_categoria__drm_nombre
+msgid "Introduce el nombre de la categoría"
+msgstr "Enter the name of the category"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,help:drm_videoclub.field_drm_videoclub_actor__drm_nombre
+msgid "Introduce el nombre del actor"
+msgstr "Enter the name of the actor"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,help:drm_videoclub.field_drm_videoclub_director__drm_nombre
+msgid "Introduce el nombre del director"
+msgstr "Enter the name of the director"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,help:drm_videoclub.field_drm_videoclub_pelicula__drm_ejemplares
+msgid "Introduce el número de ejemplares en inventario"
+msgstr "Enter the number of copies in inventory"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,help:drm_videoclub.field_drm_videoclub_pelicula__drm_precio
+msgid "Introduce el precio de la película"
+msgstr "Enter the price of the movie"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,help:drm_videoclub.field_drm_videoclub_pelicula__drm_nombre
+msgid "Introduce el título de la película"
+msgstr "Enter the title of the movie"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,help:drm_videoclub.field_drm_videoclub_pelicula__drm_fecha_salida
+msgid "Introduce fecha de salida"
+msgstr "Enter release date"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,help:drm_videoclub.field_drm_videoclub_actor__drm_biografia
+msgid "Introduce la biografía del actor"
+msgstr "Enter the biography of the actor"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,help:drm_videoclub.field_drm_videoclub_director__drm_biografia
+msgid "Introduce la biografía del director"
+msgstr "Enter the biography of the director"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,help:drm_videoclub.field_drm_videoclub_pelicula__drm_duracion
+msgid "Introduce la duración de la película en minutos"
+msgstr "Enter the duration of the movie in minutes"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,help:drm_videoclub.field_drm_videoclub_actor__drm_fecha_nacimiento
+msgid "Introduce la fecha de nacimiento del actor"
+msgstr "Enter the date of birth of the actor"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,help:drm_videoclub.field_drm_videoclub_director__drm_fecha_nacimiento
+msgid "Introduce la fecha de nacimiento del director"
+msgstr "Enter the date of birth of the director"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,help:drm_videoclub.field_drm_videoclub_actor__drm_nacionalidad
+msgid "Introduce la nacionalidad del actor"
+msgstr "Enter the nationality of the actor"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,help:drm_videoclub.field_drm_videoclub_director__drm_nacionalidad
+msgid "Introduce la nacionalidad del director"
+msgstr "Enter the nationality of the director"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,help:drm_videoclub.field_drm_videoclub_pelicula__drm_sinopsis
+msgid "Introduce la sinopsis de la película"
+msgstr "Enter the synopsis of the movie"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_actor__write_uid
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_categoria__write_uid
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_director__write_uid
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_pelicula__write_uid
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_actor__write_date
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_categoria__write_date
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_director__write_date
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_pelicula__write_date
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.pelicula_kanban
+msgid "MIN"
+msgstr "MIN"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.pelicula_search
+msgid "Menos de 10€"
+msgstr "Less than 10€"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.pelicula_search
+msgid "Menos de 120 MIN"
+msgstr "Less than 120 MIN"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.pelicula_search
+msgid "Menos de 20€"
+msgstr "Less than 20€"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.pelicula_search
+msgid "Menos de 30€"
+msgstr "Less than 30€"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.pelicula_search
+msgid "Menos de 40€"
+msgstr "Less than 40€"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.pelicula_search
+msgid "Menos de 50€"
+msgstr "Less than 50€"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.pelicula_search
+msgid "Menos de 5€"
+msgstr "Less than 5€"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.pelicula_search
+msgid "Menos de 90 MIN"
+msgstr "Less than 90 MIN"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_actor__drm_nacionalidad
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_director__drm_nacionalidad
+msgid "Nacionalidad"
+msgstr "Nationality"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_actor__drm_nombre
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_categoria__drm_nombre
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_director__drm_nombre
+msgid "Nombre"
+msgstr "Name"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.pelicula_tree
+msgid "Peliculas"
+msgstr "Movies"
+
+#. module: drm_videoclub
+#: model:ir.actions.act_window,name:drm_videoclub.pelicula_action
+#: model:ir.model,name:drm_videoclub.model_drm_videoclub_pelicula
+msgid "Película"
+msgstr "Movie"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_categoria__drm_pelicula_ids
+#: model:ir.ui.menu,name:drm_videoclub.pelicula_menu
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.actor_form
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.director_form
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.pelicula_form
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.pelicula_kanban
+msgid "Películas"
+msgstr "Movies"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.categoria_form
+msgid "Películas del Actor"
+msgstr "Movies of the Actor"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_director__drm_pelicula_ids
+msgid "Películas dirigidas"
+msgstr "Directed Movies"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.pelicula_calendar
+msgid "Películas por Fecha de Salida"
+msgstr "Movies by Release Date"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_actor__drm_pelicula_ids
+msgid "Películas realizadas"
+msgstr "Movies made"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_pelicula__drm_portada
+msgid "Portada"
+msgstr "Cover"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_pelicula__drm_precio
+msgid "Precio"
+msgstr "Price"
+
+#. module: drm_videoclub
+#: model_terms:ir.ui.view,arch_db:drm_videoclub.pelicula_pivot
+msgid "Resumen de Alquileres por Película"
+msgstr "Summary of Rentals by Movie"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,help:drm_videoclub.field_drm_videoclub_pelicula__drm_director_id
+msgid "Selecciona el director de la película"
+msgstr "Select the director of the movie"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,help:drm_videoclub.field_drm_videoclub_pelicula__drm_categoria_ids
+msgid "Selecciona las categorías de la película"
+msgstr "Select the categories of the movie"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,help:drm_videoclub.field_drm_videoclub_actor__drm_pelicula_ids
+msgid "Selecciona las películas en las que ha actuado"
+msgstr "Select the movies in which he/she has acted"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,help:drm_videoclub.field_drm_videoclub_director__drm_pelicula_ids
+msgid "Selecciona las películas que ha dirigido"
+msgstr "Select the movies he/she has directed"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,help:drm_videoclub.field_drm_videoclub_pelicula__drm_actor_ids
+msgid "Selecciona los actores de la película"
+msgstr "Select the actors of the movie"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,help:drm_videoclub.field_drm_videoclub_categoria__drm_pelicula_ids
+msgid "Selecciona películas que pertenecen a esta categoria"
+msgstr "Select movies that belong to this category"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_pelicula__drm_sinopsis
+msgid "Sinopsis"
+msgstr "Synopsis"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,help:drm_videoclub.field_drm_videoclub_pelicula__drm_portada
+msgid "Sube la imagen de la portada de la película"
+msgstr "Upload the cover image of the movie"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,help:drm_videoclub.field_drm_videoclub_actor__drm_foto
+msgid "Sube la imagen del actor"
+msgstr "Upload the image of the actor"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,help:drm_videoclub.field_drm_videoclub_director__drm_foto
+msgid "Sube la imagen del director"
+msgstr "Upload the image of the director"
+
+#. module: drm_videoclub
+#: model:ir.model.fields,field_description:drm_videoclub.field_drm_videoclub_pelicula__drm_nombre
+msgid "Título"
+msgstr "Title"
+
+#. module: drm_videoclub
+#: model:res.groups,name:drm_videoclub.group_drm_videoclub_user
+msgid "Usuarios"
+msgstr "Users"
+
+#. module: drm_videoclub
+#: model:ir.module.category,name:drm_videoclub.category_drm_videoclub
+#: model:ir.ui.menu,name:drm_videoclub.root
+msgid "Videoclub"
+msgstr "Video Club"

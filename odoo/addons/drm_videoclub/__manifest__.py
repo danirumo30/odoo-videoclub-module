@@ -24,12 +24,14 @@ Long description of module's purpose
     'data': [
         'security/ir.model.access.csv',
         'security/security.xml',
+        'reports/report_actor.xml',
+        'reports/report_director.xml',
+        'reports/report_pelicula.xml',
         'views/menus.xml',
         'views/pelicula.xml',
         'views/categoria.xml',
         'views/director.xml',
         'views/actor.xml',
-        #'reports/report_actor.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
