@@ -1,0 +1,43 @@
+<odoo>
+  <data>
+    <!--CATEGORIA-->
+    <record id="category_drm_videoclub" model="ir.module.category">
+    <field name="name">Videoclub</field>
+    <field name="description">Categoría para el módulo Videoclub</field>
+    </record>
+  
+    <!-- GRUPOS DE SEGURIDAD -->
+    <record id="group_drm_videoclub_user" model="res.groups">
+      <field name="name">Usuarios</field>
+      <field name="category_id" ref="category_drm_videoclub"/>
+    </record>
+
+    <record id="group_drm_videoclub_admin" model="res.groups">
+      <field name="name">Admin</field>
+      <field name="category_id" ref="category_drm_videoclub"/>
+    </record>
+
+    <!--REGLAS DE ACCESO-->
+    <record id="rule_drm_videoclub_user" model="ir.rule">
+      <field name="name">Acceso de usuario de videoclub</field>
+      <field name="model_id" ref="model_drm_videoclub_pelicula"/>
+      <field name="groups" eval="[(4, ref('group_drm_videoclub_user'))]"/>
+      <field name="domain_force">[('drm_precio', '&gt;', 0)]</field>
+      <field name="perm_read" eval="True"/>
+      <field name="perm_write" eval="False"/>
+      <field name="perm_create" eval="False"/>
+      <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <record id="rule_drm_videoclub_admin" model="ir.rule">
+      <field name="name">Acceso total para admins de videoclub</field>
+      <field name="model_id" ref="model_drm_videoclub_pelicula"/>
+      <field name="groups" eval="[(4, ref('group_drm_videoclub_admin'))]"/>
+      <field name="domain_force">[]</field>
+      <field name="perm_read" eval="True"/>
+      <field name="perm_write" eval="True"/>
+      <field name="perm_create" eval="True"/>
+      <field name="perm_unlink" eval="True"/>
+    </record>
+  </data>
+</odoo>

@@ -1,5 +1,6 @@
 <odoo>
   <data>
+    <!--VISTA TREE-->
     <record id="drm_videoclub.pelicula_tree" model="ir.ui.view">
       <field name="name">drm_videoclub.pelicula.tree</field>
       <field name="model">drm_videoclub.pelicula</field>
@@ -18,6 +19,8 @@
         </tree>
       </field>
     </record>
+
+    <!--VISTA FORM-->
     <record id="drm_videoclub.pelicula_form" model="ir.ui.view">
       <field name="name">drm_videoclub.pelicula.form</field>
       <field name="model">drm_videoclub.pelicula</field>
@@ -49,11 +52,13 @@
         </form>
       </field>
     </record>
+
+    <!--VISTA KANBAN-->
     <record id="drm_videoclub.pelicula_kanban" model="ir.ui.view">
       <field name="name">drm_videoclub.pelicula.kanban</field>
       <field name="model">drm_videoclub.pelicula</field>
       <field name="arch" type="xml">
-          <kanban string="Películas">
+          <kanban string="Películas" default_group_by="drm_director_id">
               <templates>
                   <t t-name="kanban-box">
                       <div class="oe_kanban_global_click card p-2">
@@ -78,13 +83,77 @@
                                   </div>
                               </div>
                               <div class="ms-3">
-                                  <field name="drm_portada" widget="image" class="oe_avatar_right" style="width: 64px; height: 64px"/>
+                                  <field name="drm_portada" widget="image" preview_image="1" class="oe_avatar_right" style="width: 64px; height: 64px"/>
                               </div>
                           </div>
                       </div>
                   </t>
               </templates>
           </kanban>
+      </field>
+    </record>
+
+    <!--VISTA SEARCH COMPLEJA-->
+    <record id="drm_videoclub.pelicula_search" model="ir.ui.view">
+        <field name="name">drm_videoclub.pelicula.search</field>
+        <field name="model">drm_videoclub.pelicula</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="drm_nombre"/>
+                <field name="drm_precio"/>
+                <field name="drm_duracion"/>
+                <group string="Filtros por precio">     
+                  <filter name="filter_precio_menor_cinco" string="Menos de 5€" domain="[('drm_precio', '&lt;', 6)]"/>
+                  <filter name="filter_precio_menor_diez" string="Menos de 10€" domain="[('drm_precio', '&lt;', 11)]"/>
+                  <filter name="filter_precio_menor_veinte" string="Menos de 20€" domain="[('drm_precio', '&lt;', 21)]"/>
+                  <filter name="filter_precio_menor_treinta" string="Menos de 30€" domain="[('drm_precio', '&lt;', 31)]"/>
+                  <filter name="filter_precio_menor_cuarenta" string="Menos de 40€" domain="[('drm_precio', '&lt;', 41)]"/>
+                  <filter name="filter_precio_menor_cincuenta" string="Menos de 50€" domain="[('drm_precio', '&lt;', 51)]"/>
+                </group>
+                <group string="Filtros por duración">
+                  <filter name="filter_duracion_menor_dos" string="Menos de 120 MIN" domain="[('drm_duracion', '&lt;', 121)]"/>
+                  <filter name="filter_precio_menor_una_y_media" string="Menos de 90 MIN" domain="[('drm_duracion', '&lt;', 91)]"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!--VISTA CALENDAR-->
+    <record id="drm_videoclub.pelicula_calendar" model="ir.ui.view">
+      <field name="name">drm_videoclub.pelicula.calendar</field>
+      <field name="model">drm_videoclub.pelicula</field>
+      <field name="arch" type="xml">
+        <calendar string="Películas por Fecha de Salida" date_start="drm_fecha_salida">
+          <field name="drm_nombre"/>
+          <field name="drm_precio"/>
+          <field name="drm_duracion"/>
+        </calendar>
+      </field>
+    </record>
+
+    <!--VISTA PIVOT-->
+    <record id="drm_videoclub.pelicula_pivot" model="ir.ui.view">
+      <field name="name">drm_videoclub.pelicula.pivot</field>
+      <field name="model">drm_videoclub.pelicula</field>
+      <field name="arch" type="xml">
+        <pivot string="Resumen de Alquileres por Película">
+          <field name="drm_nombre" type="row"/>
+          <field name="drm_categoria_ids" type="col"/>
+          <field name="drm_precio" type="measure"/>
+          <field name="drm_ejemplares" type="measure"/>
+        </pivot>
+      </field>
+    </record>
+
+    <!--VISTA GRAPH-->
+    <record id="drm_videoclub.pelicula_graph" model="ir.ui.view">
+      <field name="name">drm_videoclub.pelicula.graph</field>
+      <field name="model">drm_videoclub.pelicula</field>
+      <field name="arch" type="xml">
+        <graph string="Alquileres por Categoría" type="bar">
+          <field name="drm_categoria_ids" type="dimension"/>
+          <field name="drm_precio" type="measure"/>
+        </graph>
       </field>
     </record>
   </data>

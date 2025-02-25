@@ -3,7 +3,7 @@
     <record id="drm_videoclub.pelicula_action" model="ir.actions.act_window">
         <field name="name">Película</field>
         <field name="res_model">drm_videoclub.pelicula</field>
-        <field name="view_mode">kanban,tree,form</field>
+        <field name="view_mode">kanban,tree,form,calendar,graph,pivot</field>
     </record>
 
     <record id="drm_videoclub.categoria_action" model="ir.actions.act_window">

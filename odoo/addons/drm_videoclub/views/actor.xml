@@ -46,7 +46,7 @@
       <field name="name">drm_videoclub.actor.kanban</field>
       <field name="model">drm_videoclub.actor</field>
       <field name="arch" type="xml">
-        <kanban string="">
+        <kanban string="Actores" default_group_by="drm_nacionalidad">
           <templates>
             <t t-name="kanban-box">
               <div class="oe_kanban_global_click card p-2">
@@ -68,7 +68,7 @@
                     </div>
                   </div>
                   <div class="ms-3">
-                      <field name="drm_foto" widget="image" class="oe_avatar_left" style="width: 64px; height: 64px"/>
+                      <field name="drm_foto" widget="image" preview_image="1" class="oe_avatar_left" style="width: 64px; height: 64px"/>
                   </div>
                 </div>
               </div>
