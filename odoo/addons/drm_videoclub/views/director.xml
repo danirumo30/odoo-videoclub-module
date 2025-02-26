@@ -10,30 +10,22 @@
     <record id="drm_videoclub.director_tree" model="ir.ui.view">
       <field name="name">drm_videoclub.director.tree</field>
       <field name="model">drm_videoclub.director</field>
+      <field name="inherit_id" ref="drm_videoclub.persona_base_tree"/>
       <field name="arch" type="xml">
-        <tree string="Directores">
-          <field name="drm_foto" widget="image" class="oe_avatar"/>
-          <field name="drm_nombre"/>
-          <field name="drm_nacionalidad"/>
-          <field name="drm_fecha_nacimiento"/>
-          <field name="drm_biografia"/>
+        <xpath expr="//field[@name='drm_biografia']" position="after">
           <field name="drm_pelicula_ids"/>
-        </tree>
+        </xpath>
       </field>
     </record>
 
     <record id="drm_videoclub.director_form" model="ir.ui.view">
       <field name="name">drm_videoclub.director.form</field>
       <field name="model">drm_videoclub.director</field>
+      <field name="inherit_id" ref="drm_videoclub.persona_base_form"/>
       <field name="arch" type="xml">
-        <form string="Directores">
+        <form string="">
           <sheet>
             <group>
-              <field name="drm_foto" widget="image" class="oe_avatar_left"/>
-              <field name="drm_nombre"/>
-              <field name="drm_nacionalidad"/>
-              <field name="drm_fecha_nacimiento"/>
-              <field name="drm_biografia"/>
               <field name="drm_pelicula_ids">
                 <tree string="Películas">
                   <field name="drm_portada" widget="image" class="oe_avatar_left"/>
@@ -43,7 +35,7 @@
                   <field name="drm_precio"/>
                 </tree>
               </field>
-            </group>  
+            </group>
             <button name="%(drm_videoclub_action_report_director)d" type="action" string="Imprimir Informe" class="oe_highlight"/>
           </sheet>
         </form>

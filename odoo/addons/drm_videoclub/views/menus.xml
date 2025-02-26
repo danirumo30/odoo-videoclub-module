@@ -1,5 +1,5 @@
 <odoo>
-  <data>
+  <data noupdate="1">
     <record id="drm_videoclub.pelicula_action" model="ir.actions.act_window">
         <field name="name">Película</field>
         <field name="res_model">drm_videoclub.pelicula</field>
@@ -16,12 +16,20 @@
         <field name="name">Director</field>
         <field name="res_model">drm_videoclub.director</field>
         <field name="view_mode">kanban,tree,form</field>
+        <field name="view_ids" eval="[(0, 0, {'view_mode': 'kanban', 'view_id': ref('drm_videoclub.director_kanban')}),
+                                      (0, 0, {'view_mode': 'tree', 'view_id': ref('drm_videoclub.director_tree')}),
+                                      (0, 0, {'view_mode': 'form', 'view_id': ref('drm_videoclub.director_form')})
+                                     ]"/>
     </record>
 
     <record id="drm_videoclub.actor_action" model="ir.actions.act_window">
         <field name="name">Actor</field>
         <field name="res_model">drm_videoclub.actor</field>
         <field name="view_mode">kanban,tree,form</field>
+        <field name="view_ids" eval="[(0, 0, {'view_mode': 'kanban', 'view_id': ref('drm_videoclub.actor_kanban')}),
+                                      (0, 0, {'view_mode': 'tree', 'view_id': ref('drm_videoclub.actor_tree')}),
+                                      (0, 0, {'view_mode': 'form', 'view_id': ref('drm_videoclub.actor_form')})
+                                     ]"/>
     </record>
 
     <menuitem

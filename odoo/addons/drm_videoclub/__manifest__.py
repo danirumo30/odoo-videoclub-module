@@ -27,11 +27,12 @@ Long description of module's purpose
         'reports/report_actor.xml',
         'reports/report_director.xml',
         'reports/report_pelicula.xml',
-        'views/menus.xml',
         'views/pelicula.xml',
         'views/categoria.xml',
+        'views/persona.xml',
         'views/director.xml',
         'views/actor.xml',
+        'views/menus.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

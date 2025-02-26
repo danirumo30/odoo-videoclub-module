@@ -103,28 +103,29 @@
 
     <!--VISTA SEARCH COMPLEJA-->
     <record id="drm_videoclub.pelicula_search" model="ir.ui.view">
-        <field name="name">drm_videoclub.pelicula.search</field>
-        <field name="model">drm_videoclub.pelicula</field>
-        <field name="arch" type="xml">
-            <search>
-                <field name="drm_nombre"/>
-                <field name="drm_precio"/>
-                <field name="drm_duracion"/>
-                <group string="Filtros por precio">     
-                  <filter name="filter_precio_menor_cinco" string="Menos de 5€" domain="[('drm_precio', '&lt;', 6)]"/>
-                  <filter name="filter_precio_menor_diez" string="Menos de 10€" domain="[('drm_precio', '&lt;', 11)]"/>
-                  <filter name="filter_precio_menor_veinte" string="Menos de 20€" domain="[('drm_precio', '&lt;', 21)]"/>
-                  <filter name="filter_precio_menor_treinta" string="Menos de 30€" domain="[('drm_precio', '&lt;', 31)]"/>
-                  <filter name="filter_precio_menor_cuarenta" string="Menos de 40€" domain="[('drm_precio', '&lt;', 41)]"/>
-                  <filter name="filter_precio_menor_cincuenta" string="Menos de 50€" domain="[('drm_precio', '&lt;', 51)]"/>
-                </group>
-                <group string="Filtros por duración">
-                  <filter name="filter_duracion_menor_dos" string="Menos de 120 MIN" domain="[('drm_duracion', '&lt;', 121)]"/>
-                  <filter name="filter_precio_menor_una_y_media" string="Menos de 90 MIN" domain="[('drm_duracion', '&lt;', 91)]"/>
-                </group>
-            </search>
-        </field>
+      <field name="name">drm_videoclub.pelicula.search</field>
+      <field name="model">drm_videoclub.pelicula</field>
+      <field name="arch" type="xml">
+          <search>
+              <field name="drm_nombre"/>
+              <field name="drm_precio"/>
+              <field name="drm_duracion"/>
+              <group string="Filtros por precio">     
+                  <filter name="filter_precio_menor_cinco" string="Menos de 5€" domain="[('drm_precio', '&lt;', 6)]" context="{'group_by': 'drm_precio'}"/>
+                  <filter name="filter_precio_menor_diez" string="Menos de 10€" domain="[('drm_precio', '&lt;', 11)]" context="{'group_by': 'drm_precio'}"/>
+                  <filter name="filter_precio_menor_veinte" string="Menos de 20€" domain="[('drm_precio', '&lt;', 21)]" context="{'group_by': 'drm_precio'}"/>
+                  <filter name="filter_precio_menor_treinta" string="Menos de 30€" domain="[('drm_precio', '&lt;', 31)]" context="{'group_by': 'drm_precio'}"/>
+                  <filter name="filter_precio_menor_cuarenta" string="Menos de 40€" domain="[('drm_precio', '&lt;', 41)]" context="{'group_by': 'drm_precio'}"/>
+                  <filter name="filter_precio_menor_cincuenta" string="Menos de 50€" domain="[('drm_precio', '&lt;', 51)]" context="{'group_by': 'drm_precio'}"/>
+              </group>
+              <group string="Filtros por duración">
+                  <filter name="filter_duracion_menor_dos" string="Menos de 120 MIN" domain="[('drm_duracion', '&lt;', 121)]" context="{'group_by': 'drm_duracion'}"/>
+                  <filter name="filter_duracion_menor_una_y_media" string="Menos de 90 MIN" domain="[('drm_duracion', '&lt;', 91)]" context="{'group_by': 'drm_duracion'}"/>
+              </group>
+          </search>
+      </field>
     </record>
+
 
     <!--VISTA CALENDAR-->
     <record id="drm_videoclub.pelicula_calendar" model="ir.ui.view">

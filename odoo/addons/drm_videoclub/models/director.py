@@ -4,14 +4,9 @@ from odoo import models, fields
 
 class Director(models.Model):
     _name = 'drm_videoclub.director'
+    _inherit = 'drm_videoclub.persona'
     _description = 'Director'
     _rec_name = 'drm_nombre'
-    
-    drm_nombre = fields.Char(string='Nombre', required=True, help='Introduce el nombre del director')
-    drm_nacionalidad = fields.Char(string='Nacionalidad', required=True, help='Introduce la nacionalidad del director')
-    drm_fecha_nacimiento = fields.Datetime(string='Fecha de Nacimiento', help='Introduce la fecha de nacimiento del director')
-    drm_biografia = fields.Text(string='Biografía', help='Introduce la biografía del director')
-    drm_foto = fields.Image(string='Foto', max_width = 64, max_height = 64, help='Sube la imagen del director')
 
     # Relación One2many
     drm_pelicula_ids = fields.One2many(
