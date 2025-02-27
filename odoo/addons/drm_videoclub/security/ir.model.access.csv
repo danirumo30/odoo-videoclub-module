@@ -7,5 +7,3 @@ access_drm_videoclub_director,drm_videoclub.director,model_drm_videoclub_directo
 access_drm_videoclub_director_admin,drm_videoclub.director,model_drm_videoclub_director,base.group_system,1,1,1,1
 access_drm_videoclub_actor,drm_videoclub.actor,model_drm_videoclub_actor,base.group_user,1,1,1,0
 access_drm_videoclub_actor_admin,drm_videoclub.actor,model_drm_videoclub_actor,base.group_system,1,1,1,1
-access_drm_videoclub_artista,drm_videoclub.artista,model_drm_videoclub_artista,base.group_user,1,1,1,0
-access_drm_videoclub_artista_admin,drm_videoclub.artista,model_drm_videoclub_artista,base.group_system,1,1,1,1
