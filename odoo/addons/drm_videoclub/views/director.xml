@@ -1,5 +1,6 @@
 <odoo>
   <data>
+    <!--ACCIÓN REPORTE-->
     <record id="drm_videoclub_action_report_director" model="ir.actions.report">
       <field name="name">Informe de Director</field>
       <field name="model">drm_videoclub.director</field>
@@ -7,6 +8,7 @@
       <field name="report_type">qweb-html</field>
     </record>
     
+    <!--VISTA TREE HEREDADA DE PERSONA-->
     <record id="drm_videoclub.director_tree" model="ir.ui.view">
       <field name="name">drm_videoclub.director.tree</field>
       <field name="model">drm_videoclub.director</field>
@@ -18,6 +20,7 @@
       </field>
     </record>
 
+    <!--VISTA FORM HEREDADA DE PERSONA-->
     <record id="drm_videoclub.director_form" model="ir.ui.view">
       <field name="name">drm_videoclub.director.form</field>
       <field name="model">drm_videoclub.director</field>
@@ -42,6 +45,7 @@
       </field>
     </record>
 
+    <!--VISTA KANBAN-->
     <record id="drm_videoclub.director_kanban" model="ir.ui.view">
       <field name="name">drm_videoclub.director.kanban</field>
       <field name="model">drm_videoclub.director</field>

@@ -1,5 +1,6 @@
 <odoo>
   <data>
+    <!--VISTA TREE-->
     <record id="drm_videoclub.categoria_tree" model="ir.ui.view">
       <field name="name">drm_videoclub.categoria.tree</field>
       <field name="model">drm_videoclub.categoria</field>
@@ -10,6 +11,8 @@
         </tree>
       </field>
     </record>
+
+    <!--VISTA FORM-->
     <record id="drm_videoclub.categoria_form" model="ir.ui.view">
       <field name="name">drm_videoclub.categoria.form</field>
       <field name="model">drm_videoclub.categoria</field>
