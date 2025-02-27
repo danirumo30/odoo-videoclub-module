@@ -14,22 +14,51 @@
                     <t t-foreach="docs" t-as="director">
                         <div class="page">
                             <h2 t-field="director.drm_nombre"/>
-                            <div>
-                                <strong>Nacionalidad:</strong>
-                                <span t-field="director.drm_nacionalidad"/>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div style="flex-grow: 1;">
+                                    <div>
+                                        <strong>Nacionalidad:</strong>
+                                        <span t-field="director.drm_nacionalidad"/>
+                                    </div>
+                                    <div>
+                                        <strong>Fecha de Nacimiento:</strong>
+                                        <span t-field="director.drm_fecha_nacimiento"/>
+                                    </div>
+                                    <div>
+                                        <strong>Biografía:</strong>
+                                        <span t-field="director.drm_biografia"/>
+                                    </div>
+                                </div>
+                                <div>
+                                    <t t-if="director.drm_foto">
+                                        <img t-att-src="image_data_uri(director.drm_foto)" style="max-height: 100px; max-width: 80px; float: right; margin-right: 20px"/>
+                                    </t>
+                                </div>
                             </div>
-                            <div>
-                                <strong>Fecha de Nacimiento:</strong>
-                                <span t-field="director.drm_fecha_nacimiento"/>
-                            </div>
-                            <div>
-                                <strong>Biografía:</strong>
-                                <span t-field="director.drm_biografia"/>
-                            </div>
+
+                            <t t-call="drm_videoclub.report_movies_director_template"/>
                         </div>
                     </t>
                 </t>
             </t>
+        </template>
+
+        <template id="drm_videoclub.report_movies_director_template">
+            <div>
+                <br/>
+                <h3>Películas Dirigidas</h3>
+                <t t-foreach="director.drm_pelicula_ids" t-as="pelicula">
+                    <div>
+                        <strong>Película:</strong> <span t-field="pelicula.drm_nombre"/>
+                    </div>
+                    <div>
+                        <strong>Año:</strong> <span t-field="pelicula.drm_fecha_salida"/>
+                    </div>
+                    <div>
+                        <strong>Sinopsis:</strong> <span t-field="pelicula.drm_sinopsis"/>
+                    </div>
+                </t>
+            </div>
         </template>
     </data>
 </odoo>

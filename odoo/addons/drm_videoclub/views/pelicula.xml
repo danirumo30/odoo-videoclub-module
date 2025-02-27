@@ -20,8 +20,8 @@
           <field name="drm_precio"/>
           <field name="drm_ejemplares"/>
           <field name="drm_fecha_salida"/>
-          <field name="drm_categoria_ids"/>
-          <field name="drm_actor_ids"/>
+          <field name="drm_nombre_categorias"/>
+          <field name="drm_nombre_actores"/>
           <field name="drm_director_id"/>
         </tree>
       </field>

@@ -6,7 +6,7 @@
       <field name="arch" type="xml">
         <tree string="Categoria">
           <field name="drm_nombre"/>
-          <field name="drm_pelicula_ids"/>
+          <field name="drm_nombre_peliculas"/>
         </tree>
       </field>
     </record>

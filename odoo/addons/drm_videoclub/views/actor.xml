@@ -13,7 +13,7 @@
       <field name="inherit_id" ref="drm_videoclub.artista_base_tree"/>
       <field name="arch" type="xml">
         <xpath expr="//field[@name='drm_biografia']" position="after">
-          <field name="drm_pelicula_ids"/>
+          <field name="drm_nombre_peliculas"/>
         </xpath>
       </field>
     </record>
@@ -67,8 +67,8 @@
                       <i class="fa fa-calendar"></i> <strong><em>FECHA DE NACIMIENTO</em></strong> - <field name="drm_fecha_nacimiento"/>
                     </div>
                   </div>
-                  <div class="ms-3">
-                      <field name="drm_foto" widget="image" preview_image="1" class="oe_avatar_left" style="width: 64px; height: 64px"/>
+                  <div class="o_kanban_image">
+                      <img class="o_kanban_image_inner_pic" t-att-src="kanban_image('drm_videoclub.actor', 'drm_foto', record.id.raw_value)"/>
                   </div>
                 </div>
               </div>

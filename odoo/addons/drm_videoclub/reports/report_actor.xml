@@ -14,17 +14,26 @@
                     <t t-foreach="docs" t-as="actor">
                         <div class="page">
                             <h2 t-field="actor.drm_nombre"/>
-                            <div>
-                                <strong>Nacionalidad:</strong>
-                                <span t-field="actor.drm_nacionalidad"/>
-                            </div>
-                            <div>
-                                <strong>Fecha de Nacimiento:</strong>
-                                <span t-field="actor.drm_fecha_nacimiento"/>
-                            </div>
-                            <div>
-                                <strong>Biografía:</strong>
-                                <span t-field="actor.drm_biografia"/>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div style="flex-grow: 1;">
+                                    <div>
+                                        <strong>Nacionalidad:</strong>
+                                        <span t-field="actor.drm_nacionalidad"/>
+                                    </div>
+                                    <div>
+                                        <strong>Fecha de Nacimiento:</strong>
+                                        <span t-field="actor.drm_fecha_nacimiento"/>
+                                    </div>
+                                    <div>
+                                        <strong>Biografía:</strong>
+                                        <span t-field="actor.drm_biografia"/>
+                                    </div>
+                                </div>
+                                <div>
+                                    <t t-if="actor.drm_foto">
+                                        <img t-att-src="image_data_uri(actor.drm_foto)" style="max-height: 100px; max-width: 80px; float: right; margin-right: 20px"/>
+                                    </t>
+                                </div>
                             </div>
                         </div>
                     </t>
