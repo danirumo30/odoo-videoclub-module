@@ -1,8 +1,8 @@
 <odoo>
   <data>
-    <record id="drm_videoclub.persona_base_tree" model="ir.ui.view">
-      <field name="name">drm_videoclub.persona.base.tree</field>
-      <field name="model">drm_videoclub.persona</field>
+    <record id="drm_videoclub.artista_base_tree" model="ir.ui.view">
+      <field name="name">drm_videoclub.artista.base.tree</field>
+      <field name="model">drm_videoclub.artista</field>
       <field name="arch" type="xml">
         <tree string="">
           <field name="drm_foto" widget="image" class="oe_avatar"/>
@@ -14,9 +14,9 @@
       </field>
     </record>
 
-    <record id="drm_videoclub.persona_base_form" model="ir.ui.view">
-      <field name="name">drm_videoclub.persona.base.form</field>
-      <field name="model">drm_videoclub.persona</field>
+    <record id="drm_videoclub.artista_base_form" model="ir.ui.view">
+      <field name="name">drm_videoclub.artista.base.form</field>
+      <field name="model">drm_videoclub.artista</field>
       <field name="arch" type="xml">
         <form string="">
           <sheet>

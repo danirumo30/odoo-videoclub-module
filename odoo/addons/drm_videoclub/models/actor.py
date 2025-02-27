@@ -4,7 +4,7 @@ from odoo import models, fields
 
 class Actor(models.Model):
     _name = 'drm_videoclub.actor'
-    _inherit = 'drm_videoclub.persona'
+    _inherit = 'drm_videoclub.artista'
     _description = 'Actor'
     _rec_name = 'drm_nombre'
 

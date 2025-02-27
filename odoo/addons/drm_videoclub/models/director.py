@@ -4,7 +4,7 @@ from odoo import models, fields
 
 class Director(models.Model):
     _name = 'drm_videoclub.director'
-    _inherit = 'drm_videoclub.persona'
+    _inherit = 'drm_videoclub.artista'
     _description = 'Director'
     _rec_name = 'drm_nombre'
 

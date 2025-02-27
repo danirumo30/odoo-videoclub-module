@@ -12,6 +12,12 @@
         <field name="view_mode">tree,form</field>
     </record>
 
+    <record id="drm_videoclub.artista_action" model="ir.actions.act_window">
+        <field name="name">Artista</field>
+        <field name="res_model">drm_videoclub.artista</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
     <record id="drm_videoclub.director_action" model="ir.actions.act_window">
         <field name="name">Director</field>
         <field name="res_model">drm_videoclub.director</field>

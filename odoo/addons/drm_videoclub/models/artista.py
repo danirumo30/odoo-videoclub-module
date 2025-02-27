@@ -2,9 +2,9 @@
 
 from odoo import models, fields
 
-class Persona(models.Model):
-    _name = 'drm_videoclub.persona'
-    _description = 'Persona'
+class Artista(models.Model):
+    _name = 'drm_videoclub.artista'
+    _description = 'Artista'
     
     drm_nombre = fields.Char(string='Nombre', required=True, help='Introduce el nombre')
     drm_nacionalidad = fields.Char(string='Nacionalidad', required=True, help='Introduce la nacionalidad')

@@ -29,7 +29,7 @@ Long description of module's purpose
         'reports/report_pelicula.xml',
         'views/pelicula.xml',
         'views/categoria.xml',
-        'views/persona.xml',
+        'views/artista.xml',
         'views/director.xml',
         'views/actor.xml',
         'views/menus.xml',
