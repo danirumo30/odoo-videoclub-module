@@ -49,8 +49,8 @@ La infraestructura está contenida en **Docker** con **Docker Compose**, facilit
 
 4. **Acceder a Odoo**
    - URL: [http://localhost:8069](http://localhost:8069)
-   - Iniciar sesión como **superusuario**
    - Activar el **modo desarrollador (debug)**
+   - Iniciar sesión como **superusuario**
    - Ir a **Apps → Actualizar lista**
    - Buscar y **instalar el módulo `Videoclub`**
 
@@ -88,17 +88,10 @@ odoo-videoclub-module-main/
 A continuación, puedes añadir capturas de pantalla del módulo en funcionamiento. Recomendamos incluir:
 
 1. **Vista de películas**
-2. **Formulario de actor/director**
-3. **Informe PDF generado**
-4. **Menú principal del videoclub**
-
-> 📁 Crea una carpeta `/screenshots` y guarda tus imágenes ahí. Luego, enlázalas así:
-
-```markdown
-![Películas](screenshots/peliculas.png)
-![Formulario Actor](screenshots/actor_form.png)
-```
-
+   ![image](https://github.com/user-attachments/assets/f3f18a60-f8f4-4ce1-918c-dda471e6f9ab)
+3. **Formulario de actor/director**
+   ![image](https://github.com/user-attachments/assets/3b83eaa6-459f-4014-a7a3-a20c117e9bba)
+   
 ---
 
 ## 🧪 Extensiones recomendadas (VSCode)
@@ -129,4 +122,4 @@ Este proyecto está bajo la licencia MIT. Consulta el archivo [LICENSE](./LICENS
 
 **Daniel Rubio Mora**
 
-Proyecto final del módulo **Servicios en Red (SGE)**.
+Proyecto final del módulo **Sistemas de Gestión Empresarial (SGE)**.
